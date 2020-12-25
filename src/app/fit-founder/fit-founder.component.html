@@ -1,0 +1,48 @@
+<div class="background">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 testimonials">
+        <h1
+          *ngIf="isAnimationActive"
+          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+          class="mb-4 mt-5 d-inline-block font-weight-bold text-light"
+        >
+          <span>Fit Founder</span>
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right' : ''"
+            class="bottom-line"
+          ></div>
+        </h1>
+      </div>
+    </div>
+    <div class="row story-align">
+      <div class="col-12">
+        <h3 class="font-weight-bold text-yellow">Story :</h3>
+      </div>
+      <div class="col-12">
+        <h5 class="font-weight-bold text-light">
+          My goal is to make these numbers more efficient.
+        </h5>
+      </div>
+      <div class="col-2 text-right">
+        <img src="../assets/dumbell.svg" alt="Dumbell" />
+      </div>
+      <div class="col-10 font-weight-bold text-light">
+        <p>90% of Gyms make hand to mouth cash flow every month</p>
+      </div>
+      <div class="col-2 text-right">
+        <img src="../assets/dumbell.svg" alt="Dumbell" />
+      </div>
+      <div class="col-10 font-weight-bold text-light">
+        <p>70% client churn Annually</p>
+      </div>
+      <div class="col-2 text-right">
+        <img src="../assets/dumbell.svg" alt="Dumbell" />
+      </div>
+      <div class="col-10 font-weight-bold text-light">
+        <p>50% business Closure by 2nd year of operations</p>
+      </div>
+    </div>
+  </div>
+</div>

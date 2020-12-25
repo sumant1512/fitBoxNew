@@ -1,0 +1,44 @@
+<header
+  [ngClass]="scrollStatus ? 'position-fixed' : 'position-relative'"
+  class="w-100 top-0 z-9"
+  #header
+>
+  <div class="bg-light-gray">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <div class="fit-box-logo left-to-right">
+            <img
+              (click)="navigateToHome()"
+              class="animate-logo logo"
+              src="../../assets/fitBoxYellow.svg"
+              alt="fit box logo"
+            />
+          </div>
+        </div>
+        <div class="col-6">
+          <h2
+            class="right-to-left orbitron font-weight-bold text-yellow text-right my-3 my-md-4 mr-0 mr-md-3"
+          >
+            <span (click)="navToggle()">About</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div id="sideBar" class="sidenav mt-5">
+      <div *ngFor="let route of navList">
+        <span
+          [ngClass]="{
+            'header-animation': !sideNavOpen,
+            'right-to-left': sideNavOpen,
+            'route-text-stroke': route.navRoute !== selectedRoute,
+            'text-yellow': route.navRoute === selectedRoute
+          }"
+          href="javascript:void(0)"
+          (click)="navToggle(route.navRoute)"
+          >{{ route.navName }}</span
+        >
+      </div>
+    </div>
+  </div>
+</header>

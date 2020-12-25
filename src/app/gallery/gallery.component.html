@@ -1,0 +1,49 @@
+<div class="bg-black page-background-normal">
+  <div class="container pt-3">
+    <div class="container">
+      <div
+        class="text-center row py-3 px-0 mb-3 px-md-4 heading-border gallery"
+      >
+        <div class="col-12">
+          <h1 class="d-inline-block orbitron font-weight-bold text-black">
+            <span class="orbitron">
+              <span
+                [ngClass]="isAnimationActive ? 'left-to-right text-yellow' : ''"
+                class="text-black"
+              >
+                Fit
+              </span>
+              <span
+                [ngClass]="isAnimationActive ? 'right-to-left text-light' : ''"
+                class="text-black"
+              >
+                Gallery</span
+              >
+            </span>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'bottom-to-top' : ''"
+              class="bottom-line"
+            ></div>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="row px-lg-5 py-5 orbitron">
+      <div class="col-12 col-md-6 mb-3 mb-md-0">
+        <p>
+          <span class="text-light">FB1 :</span
+          ><span class="text-yellow"> Shewalwadi</span>
+        </p>
+        <div class="w-100 w-md-75" style="height: 300px; background-color: red"></div>
+      </div>
+      <div class="col-12 col-md-6">
+        <p>
+          <span class="text-light">FB2 :</span
+          ><span class="text-yellow"> Hadapsar</span>
+        </p>
+        <div class="w-100 w-md-75" style="height: 300px; background-color: red"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.vl {
+  border-left: 1px solid #fad331;
+  height: 70px;
+}
+
+.fit-heading {
+  margin-left: -24px;
+}
+
+.fit-image {
+  width: 100%;
+  height: 322px;
+}

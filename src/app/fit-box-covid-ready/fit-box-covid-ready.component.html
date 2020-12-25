@@ -1,0 +1,42 @@
+<div class="bg-black page-background-normal">
+  <div class="container pt-5 page-height">
+    <div class="container">
+      <div
+        class="text-center row py-3 px-0 mb-3 px-md-4 heading-border covidready"
+      >
+        <div class="col-12">
+          <h1 class="d-inline-block orbitron font-weight-bold text-black">
+            <span class="orbitron">
+              <span
+                [ngClass]="isAnimationActive ? 'left-to-right text-yellow' : ''"
+                class="text-black"
+              >
+                We Are
+              </span>
+              <span
+                [ngClass]="isAnimationActive ? 'right-to-left text-light' : ''"
+                class="text-black"
+              >
+                CoVid Ready</span
+              >
+            </span>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'bottom-to-top' : ''"
+              class="bottom-line"
+            ></div>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mt-2 px-0 mt-3">
+        <div class="w-100 text-center">
+          <object class="box-shadow"
+            data="https://www.youtube.com/v/dtIGQTbAEuc&feature=youtu.be"
+          ></object>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

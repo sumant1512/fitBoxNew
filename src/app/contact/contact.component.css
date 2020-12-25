@@ -1,0 +1,29 @@
+.logo {
+  width: 137px;
+}
+button {
+  background-color: #272727;
+  box-shadow: 0 0px 3px 0px white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.fit-menu-btn {
+  border: 1px solid #fbd530;
+  color: #fbd530;
+  box-shadow: 0 1px 5px 0px #fbd530;
+}
+
+.desktop-border {
+  border-top: 1px solid #bababa;
+  border-bottom: 1px solid #bababa;
+}
+
+@media only screen and (min-width: 30px) and (max-width: 767px) {
+  .mobile-border {
+    border-top: 1px solid #bababa;
+    border-bottom: 1px solid #bababa;
+  }
+}

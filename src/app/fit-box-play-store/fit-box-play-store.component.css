@@ -1,0 +1,17 @@
+.fit-head {
+  color: #ffd00f;
+}
+button {
+  background-color: #272727;
+  box-shadow: 0 0px 3px 0px white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.fit-menu-btn {
+  border: 1px solid #fbd530;
+  color: #fbd530;
+  box-shadow: 0 1px 5px 0px #fbd530;
+}

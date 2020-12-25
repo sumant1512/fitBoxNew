@@ -1,0 +1,21 @@
+.background {
+  /* The image used */
+  background-image: url("../../assets/carousel/BannerImage1.png");
+
+  /* Set a specific height */
+  min-height: 500px;
+  height: 100vh;
+
+  /* background-color: black;
+    opacity: 0.5; */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.story-align {
+  margin-top: 45vh;
+}

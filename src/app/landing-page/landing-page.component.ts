@@ -1,3 +1,4 @@
+import { ViewportScroller } from "@angular/common";
 import { Component, HostListener, OnInit } from "@angular/core";
 
 @Component({
@@ -6,47 +7,109 @@ import { Component, HostListener, OnInit } from "@angular/core";
   styleUrls: ["./landing-page.component.css"],
 })
 export class LandingPageComponent implements OnInit {
-  constructor() {}
+  cardOne;
+  cardTwo;
+  cardThree;
+  cardOneTop;
+  cardTwoTop;
+  cardThreeTop;
+  cardFour;
+  cardFourTop;
+  cardFive;
+  cardFiveTop;
+  cardSix;
+  cardSixTop;
+  cardSeven;
+  cardSevenTop;
+  cardEight;
+  cardEightTop;
+  activeCard: string;
+  previousCard: string;
+  isMobile: boolean;
+  constructor(private viewPortScroller: ViewportScroller) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.activeCard = "banner";
+    if (window.innerWidth < 768) {
+      this.isMobile = true;
+    }
+  }
+
+  scrollToPage(selectedPage: string) {
+    this.handlePreviousButtonAction(selectedPage);
+    this.viewPortScroller.scrollToAnchor(selectedPage);
+  }
+
+  handlePreviousButtonAction(page) {
+    switch (page) {
+      case "banner":
+        window.scrollTo(0, 0);
+        break;
+      default:
+        break;
+    }
+  }
 
   @HostListener("window:scroll", ["$event"])
   checkScroll() {
-    var d1 = document.querySelector(".one");
-    var d1orgtop = 8;
-    console.log(d1orgtop);
-    var d2 = document.querySelector(".two");
-    var d2orgtop = 600;
-    console.log(d2orgtop);
-    var d3 = document.querySelector(".three");
-    var d3orgtop = 1200;
-    console.log(d3orgtop);
-    var d4 = document.querySelector(".four");
-    var d4orgtop = 1800;
-    console.log(d4orgtop);
-
+    this.cardOne = document.querySelector(".one");
+    this.cardOneTop = 8;
+    this.cardTwo = document.querySelector(".two");
+    this.cardTwoTop = 608;
+    this.cardThree = document.querySelector(".three");
+    this.cardThreeTop = 1208;
+    this.cardFour = document.querySelector(".four");
+    this.cardFourTop = 1808;
+    this.cardFive = document.querySelector(".five");
+    this.cardFiveTop = 2408;
+    this.cardSix = document.querySelector(".six");
+    this.cardSixTop = 3008;
+    this.cardSeven = document.querySelector(".seven");
+    this.cardSevenTop = 3608;
+    this.cardEight = document.querySelector(".eight");
+    this.cardEightTop = 4208;
     var st = window.pageYOffset;
 
     /* change classes based on section positions */
-    if (st >= d1orgtop) {
-      d1.classList.add("latched");
+    if (st >= this.cardOneTop) {
+      this.cardOne.classList.add("latched");
     } else {
-      d1.classList.remove("latched");
+      this.cardOne.classList.remove("latched");
     }
-    if (st >= d2orgtop) {
-      d2.classList.add("latched");
+    if (st >= this.cardTwoTop) {
+      this.cardTwo.classList.add("latched");
     } else {
-      d2.classList.remove("latched");
+      this.cardTwo.classList.remove("latched");
     }
-    if (st >= d3orgtop) {
-      d3.classList.add("latched");
+    if (st >= this.cardThreeTop) {
+      this.cardThree.classList.add("latched");
     } else {
-      d3.classList.remove("latched");
+      this.cardThree.classList.remove("latched");
     }
-    if (st >= d4orgtop) {
-      d4.classList.add("latched");
+    if (st >= this.cardFourTop) {
+      this.cardFour.classList.add("latched");
     } else {
-      d4.classList.remove("latched");
+      this.cardFour.classList.remove("latched");
+    }
+    if (st >= this.cardFiveTop) {
+      this.cardFive.classList.add("latched");
+    } else {
+      this.cardFive.classList.remove("latched");
+    }
+    if (st >= this.cardSixTop) {
+      this.cardSix.classList.add("latched");
+    } else {
+      this.cardSix.classList.remove("latched");
+    }
+    if (st >= this.cardSevenTop) {
+      this.cardSeven.classList.add("latched");
+    } else {
+      this.cardSeven.classList.remove("latched");
+    }
+    if (st >= this.cardEightTop) {
+      this.cardEight.classList.add("latched");
+    } else {
+      this.cardEight.classList.remove("latched");
     }
   }
 }

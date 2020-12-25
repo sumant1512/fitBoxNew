@@ -1,0 +1,11 @@
+img {
+  height: 268px;
+}
+.justify-content-left {
+  justify-content: left;
+}
+.icn {
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px !important;
+}

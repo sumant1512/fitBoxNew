@@ -1,0 +1,149 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2e2e2e;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.z-9 {
+  z-index: 9;
+}
+
+.fit-box-logo {
+  top: 13%;
+  position: absolute;
+  z-index: 10;
+}
+
+.logo {
+  width: 50%;
+}
+
+.sidenav span {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav span:hover {
+  color: #fad331;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.bg-light-gray {
+  background-color: #2e2e2e;
+}
+
+.route-text-stroke {
+  color: transparent !important;
+  -webkit-text-stroke: 2px white !important;
+}
+
+/* line left to right */
+
+.header-animation {
+  position: relative;
+  -webkit-animation-name: headerAnimate;
+  -webkit-animation-duration: 1s;
+  animation-name: headerAnimate;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes headerAnimate {
+  from {
+    left: -250px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes headerAnimate {
+  from {
+    left: -250px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+.header-animation-opposite {
+  position: relative;
+  -webkit-animation-name: headerAnimateOpposite;
+  -webkit-animation-duration: 0.3s;
+  animation-name: headerAnimateOpposite;
+  animation-duration: 0.3s;
+}
+
+@-webkit-keyframes headerAnimateOpposite {
+  from {
+    right: 0px;
+    opacity: 0;
+  }
+  to {
+    right: 150px;
+    opacity: 1;
+  }
+}
+@keyframes headerAnimateOpposite {
+  from {
+    right: 0px;
+    opacity: 0;
+  }
+  to {
+    right: 1150px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .fit-box-logo {
+    top: 13%;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .logo {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 30px) and (max-width: 767px) {
+  .fit-box-logo {
+    top: 25%;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .logo {
+    width: 80%;
+  }
+}

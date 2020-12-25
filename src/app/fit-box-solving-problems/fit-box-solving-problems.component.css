@@ -1,0 +1,36 @@
+.open-video {
+  width: 65%;
+  height: 350px;
+}
+
+.video-list {
+  overflow-x: none;
+}
+
+.video-list object {
+  width: 100%;
+  height: 100px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .open-video {
+    width: 75%;
+    height: 350px;
+  }
+  .video-list {
+    overflow-x: none;
+  }
+}
+
+@media only screen and (min-width: 30px) and (max-width: 767px) {
+  .open-video {
+    width: 100%;
+    height: 388px;
+  }
+  .video-list {
+    overflow-x: scroll;
+  }
+  .video-list object {
+    width: 182px;
+  }
+}
