@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fitBoxNew"
+    }
+  },
+  "defaultProject": "fitBoxNew",
+  "cli": {
+    "analytics": "4369f5b8-0974-440f-8bcd-3313d420ddb1"
+  }
 }
