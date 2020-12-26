@@ -1,1 +1,84 @@
-<p>banner works!</p>
+<div class="bg-1">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <img
+          class="img-fluid logo mt-3"
+          src="../../assets/fitBoxYellow.svg"
+          alt=""
+        />
+      </div>
+      <div class="col-6">
+        <h2
+          (click)="navToggle()"
+          class="orbitron text-yellow font-weight-bold text-right mt-3"
+        >
+          About
+        </h2>
+      </div>
+    </div>
+    <div class="row text-center text-md-left">
+      <div class="col-12 col-md-2"></div>
+      <div class="col-12 col-md-8">
+        <div class="mt-5 pt-5 text-light">
+          <h2 class="font-weight-bold">
+            If you want your new year to be extra-ordinary,
+          </h2>
+          <h2 class="font-weight-bold">Do not join an ordinary gym.</h2>
+        </div>
+        <div class="d-inline-block">
+          <h1 class="orbitron font-weight-bold text-yellow">Join FITBOX</h1>
+          <div class="bottom-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 text-center text-md-left">
+      <div class="col-12 col-md-2"></div>
+      <div class="col-12 col-md-8">
+        <div>
+          <button
+            (click)="scrollToPage('whyfitbox')"
+            type="submit"
+            class="orbitron py-2 px-4 btn features-btn text-yellow"
+          >
+            See our features
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div id="sideBar" class="sidenav">
+        <div *ngFor="let route of navList">
+          <span
+            [ngClass]="{
+              'header-animation': !sideNavOpen,
+              'right-to-left': sideNavOpen
+            }"
+            href="javascript:void(0)"
+            (click)="navigateToAbout()"
+            class="text-stroke"
+            >{{ route.navName }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- next card code -->
+  <div class="bottom-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span (click)="scrollToPage('whyfitbox')" class="text-light f-12"
+          >Next</span
+        >
+      </div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+  </div>
+  <!-- next card code end-->
+</div>

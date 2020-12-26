@@ -1,1 +1,301 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #000000;
+}
+html {
+  scroll-behavior: smooth;
+}
+.orbitron {
+  font-family: "Orbitron";
+}
+.page-height-full {
+  height: 100vh;
+}
+.bg-black {
+  background-color: #000000;
+}
+.page-background {
+  background-image: url("./assets/pageBackground.png");
+  min-height: 500px;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.top-0 {
+  top: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.f-12 {
+  font-size: 12px;
+}
+.f-62 {
+  font-size: 62px;
+}
+.f-42 {
+  font-size: 42px;
+}
+.pt-56 {
+  padding-top: 64px;
+}
+.mt-n-36 {
+  margin-top: -36px;
+}
+.vertical-line {
+  border-right: 1px solid #fad331;
+  height: 35px;
+}
+.heading-border {
+  border: 1px solid transparent; /* <- here */
+  transition: border 1s;
+  text-decoration: none; /* I added this for clarity of effect */
+}
+.heading-border-add {
+  border: 1px solid #979d00;
+}
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px #e3c133;
+}
+.text-black {
+  color: #000000;
+}
+.text-yellow {
+  color: #fed330;
+}
+.bottom-line {
+  display: block;
+  height: 1px;
+  border-top: 0.5px solid #b2b2b2;
+}
+
+/*********************************************
+All animationa are here 
+**********************************************/
+
+/* header animation left to right */
+
+.header-animation {
+  position: relative;
+  -webkit-animation-name: headerAnimate;
+  -webkit-animation-duration: 1s;
+  animation-name: headerAnimate;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes headerAnimate {
+  from {
+    left: -250px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes headerAnimate {
+  from {
+    left: -250px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+/* header left to right end */
+
+/* bottom to top animation start */
+
+.bottom-to-top {
+  position: relative;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* bottom to top animation end */
+
+/* line left to right */
+
+.left-to-right {
+  position: relative;
+  -webkit-animation-name: animateright;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animateright;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes animateright {
+  from {
+    left: -150px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animateright {
+  from {
+    left: -150px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+/* animate left to right end */
+
+/* animate right to left */
+
+.right-to-left {
+  position: relative;
+  -webkit-animation-name: animateleft;
+  -webkit-animation-duration: 1s;
+  animation-name: animateleft;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animateleft {
+  from {
+    right: -150px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animateleft {
+  from {
+    right: -150px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+/* animate right to left end */
+
+/* top to bottom */
+
+.top-to-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatebottom;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* top to bottom end */
+
+/* fade in animation */
+
+.fade-in {
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* fade in animation end */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media only screen and (min-width: 30px) and (max-width: 767px) {
+}
