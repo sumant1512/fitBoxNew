@@ -18,7 +18,7 @@
   </div>
   <div class="container page-height-full">
     <div class="container pt-56 pb-5">
-      <div class="row mt-4 fitsmile">
+      <div class="row mt-4 mt-md-5 pt-0 pt-md-5 fitsmile">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="row">
             <div class="col-2">
@@ -54,12 +54,12 @@
         <div class="col-12 col-md-6 col-lg-8"></div>
       </div>
       <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 fit-image fade-in">
+        <div class="col-12 mt-n-30 col-md-6 col-lg-4 fit-image fade-in">
           <img
             *ngIf="isLineActive"
             [ngClass]="isLineActive ? 'bottom-to-top' : ''"
             class="fit-image"
-            src="../../assets/fitSmile.png"
+            src="{{fitCardData.image}}"
             alt=""
           />
         </div>
@@ -77,6 +77,11 @@
           </div>
         </div>
       </div>
+      <div
+        *ngIf="isLineActive"
+        [ngClass]="isLineActive ? 'right-to-left' : ''"
+        class="row btm-line mx-5 mt-n-54"
+      ></div>
     </div>
   </div>
   <div class="bottom-0 w-100 bottom-0 position-absolute">
