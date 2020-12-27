@@ -2,7 +2,7 @@
   <div
     *ngIf="isLineActive"
     [ngClass]="isLineActive ? 'top-to-bottom' : ''"
-    class="top-0 w-100 bottom-0 position-absolute"
+    class="top-0 w-100 bottom-0 position-absolute z-99"
   >
     <div class="row mx-0">
       <div class="col-6 px-0">
@@ -13,7 +13,7 @@
     <div class="row mx-0">
       <div class="col-12 text-center">
         <span
-          (click)="scrollToPage('reasonone')"
+          (click)="scrollToPage('reasontwo')"
           class="pointer text-light f-12"
           >Previous</span
         >
@@ -75,11 +75,11 @@
       </div>
     </div>
   </div>
-  <div class="bottom-0 w-100 bottom-0 position-absolute">
+  <div class="bottom-0 w-100 bottom-0 position-absolute z-99">
     <div class="row mx-0">
       <div class="col-12 text-center">
         <span
-          (click)="scrollToPage('reasonthree')"
+          (click)="scrollToPage('reasonfour')"
           class="pointer text-light f-12"
           >Next</span
         >
