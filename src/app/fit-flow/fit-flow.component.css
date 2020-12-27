@@ -11,3 +11,6 @@
   width: 100%;
   height: 322px;
 }
+.btm-line {
+  border-bottom: 0.5px solid #979d00;
+}

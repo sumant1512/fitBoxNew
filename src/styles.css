@@ -66,6 +66,12 @@ html {
 .mt-n-36 {
   margin-top: -36px;
 }
+.mt-n-54 {
+  margin-top: -54px;
+}
+.mt-n-30 {
+  margin-top: -30px;
+}
 .vertical-line {
   border-right: 1px solid #fad331;
   height: 35px;
