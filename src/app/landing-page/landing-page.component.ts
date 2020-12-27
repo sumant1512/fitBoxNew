@@ -37,6 +37,7 @@ export class LandingPageComponent implements OnInit {
 
   scrollToPage(selectedPage: string) {
     this.viewPortScroller.scrollToAnchor(selectedPage);
+    this.handlePreviousButtonAction(selectedPage);
   }
 
   handlePreviousButtonAction(page) {
@@ -45,6 +46,32 @@ export class LandingPageComponent implements OnInit {
         window.scrollTo(0, 0);
         break;
       case "whyfitbox":
+        this.cardTwo.classList.remove("latched");
+        this.viewPortScroller.scrollToAnchor("whyfitbox");
+        break;
+      case "reasonstojoin":
+        this.cardThree.classList.remove("latched");
+        this.viewPortScroller.scrollToAnchor("reasonstojoin");
+        break;
+      case "reasonone":
+        this.cardFour.classList.remove("latched");
+        this.viewPortScroller.scrollToAnchor("reasonone");
+        break;
+      case "reasontwo":
+        this.cardFive.classList.remove("latched");
+        this.viewPortScroller.scrollToAnchor("reasontwo");
+        break;
+      case "reasonthree":
+        this.cardSix.classList.remove("latched");
+        this.viewPortScroller.scrollToAnchor("reasonthree");
+        break;
+      case "reasonthree":
+        this.cardSeven.classList.remove("latched");
+        this.viewPortScroller.scrollToAnchor("whyfitbox");
+        break;
+      case "reasonfour":
+        this.cardEight.classList.remove("latched");
+        this.viewPortScroller.scrollToAnchor("reasonfour");
         break;
       default:
         break;
@@ -54,21 +81,21 @@ export class LandingPageComponent implements OnInit {
   @HostListener("window:scroll", ["$event"])
   checkScroll() {
     this.cardOne = document.querySelector(".one");
-    this.cardOneTop = 8;
+    this.cardOneTop = 0;
     this.cardTwo = document.querySelector(".two");
-    this.cardTwoTop = 608;
+    this.cardTwoTop = window.innerHeight * 1;
     this.cardThree = document.querySelector(".three");
-    this.cardThreeTop = 1208;
+    this.cardThreeTop = window.innerHeight * 2;
     this.cardFour = document.querySelector(".four");
-    this.cardFourTop = 1808;
+    this.cardFourTop = window.innerHeight * 3;
     this.cardFive = document.querySelector(".five");
-    this.cardFiveTop = 2408;
+    this.cardFiveTop = window.innerHeight * 4;
     this.cardSix = document.querySelector(".six");
-    this.cardSixTop = 3008;
+    this.cardSixTop = window.innerHeight * 5;
     this.cardSeven = document.querySelector(".seven");
-    this.cardSevenTop = 3608;
+    this.cardSevenTop = window.innerHeight * 6;
     this.cardEight = document.querySelector(".eight");
-    this.cardEightTop = 4208;
+    this.cardEightTop = window.innerHeight * 7;
     var st = window.pageYOffset;
 
     /* change classes based on section positions */
