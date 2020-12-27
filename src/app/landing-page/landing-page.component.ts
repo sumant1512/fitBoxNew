@@ -29,10 +29,25 @@ export class LandingPageComponent implements OnInit {
   constructor(private viewPortScroller: ViewportScroller) {}
 
   ngOnInit(): void {
-    this.activeCard = "banner";
     if (window.innerWidth < 768) {
       this.isMobile = true;
     }
+    this.cardOne = document.querySelector(".one");
+    this.cardOneTop = 0;
+    this.cardTwo = document.querySelector(".two");
+    this.cardTwoTop = window.innerHeight * 1;
+    this.cardThree = document.querySelector(".three");
+    this.cardThreeTop = window.innerHeight * 2;
+    this.cardFour = document.querySelector(".four");
+    this.cardFourTop = window.innerHeight * 3;
+    this.cardFive = document.querySelector(".five");
+    this.cardFiveTop = window.innerHeight * 4;
+    this.cardSix = document.querySelector(".six");
+    this.cardSixTop = window.innerHeight * 5;
+    this.cardSeven = document.querySelector(".seven");
+    this.cardSevenTop = window.innerHeight * 6;
+    this.cardEight = document.querySelector(".eight");
+    this.cardEightTop = window.innerHeight * 7;
   }
 
   scrollToPage(selectedPage: string) {
@@ -80,22 +95,6 @@ export class LandingPageComponent implements OnInit {
 
   @HostListener("window:scroll", ["$event"])
   checkScroll() {
-    this.cardOne = document.querySelector(".one");
-    this.cardOneTop = 0;
-    this.cardTwo = document.querySelector(".two");
-    this.cardTwoTop = window.innerHeight * 1;
-    this.cardThree = document.querySelector(".three");
-    this.cardThreeTop = window.innerHeight * 2;
-    this.cardFour = document.querySelector(".four");
-    this.cardFourTop = window.innerHeight * 3;
-    this.cardFive = document.querySelector(".five");
-    this.cardFiveTop = window.innerHeight * 4;
-    this.cardSix = document.querySelector(".six");
-    this.cardSixTop = window.innerHeight * 5;
-    this.cardSeven = document.querySelector(".seven");
-    this.cardSevenTop = window.innerHeight * 6;
-    this.cardEight = document.querySelector(".eight");
-    this.cardEightTop = window.innerHeight * 7;
     var st = window.pageYOffset;
 
     /* change classes based on section positions */
