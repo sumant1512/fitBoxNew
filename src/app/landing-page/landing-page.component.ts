@@ -36,7 +36,6 @@ export class LandingPageComponent implements OnInit {
   }
 
   scrollToPage(selectedPage: string) {
-    this.handlePreviousButtonAction(selectedPage);
     this.viewPortScroller.scrollToAnchor(selectedPage);
   }
 
@@ -44,6 +43,8 @@ export class LandingPageComponent implements OnInit {
     switch (page) {
       case "banner":
         window.scrollTo(0, 0);
+        break;
+      case "whyfitbox":
         break;
       default:
         break;

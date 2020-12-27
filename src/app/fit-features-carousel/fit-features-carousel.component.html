@@ -1,0 +1,741 @@
+<div class="bg-black page-background pagecheck">
+  <div
+    *ngIf="isPageActive"
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-ride="carousel"
+  >
+    <ol class="carousel-indicators invisible">
+      <li
+        data-target="#carouselExampleIndicators"
+        data-slide-to="0"
+        class="active"
+      ></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- fit box logo section for desktop and mobile -->
+        <section>
+          <div class="page-background bg-black">
+            <div class="container pt-5 pt-md-0 mb-4 page-height">
+              <div class="row">
+                <div class="col-12 fitlogo">
+                  <div
+                    [ngClass]="isLineActiveLogo ? 'left-to-right bt' : ''"
+                    class="top-line"
+                  ></div>
+                </div>
+                <div class="col-12">
+                  <div class="text-center">
+                    <img
+                      src="../../assets/largeFitBox.png"
+                      class="img-fluid fade-in"
+                      alt="Responsive image"
+                    />
+                  </div>
+                  <div
+                    href="#carouselExampleIndicators"
+                    role="button"
+                    data-slide="next"
+                    class="pointer text-light logo-sub-content mt-3 text-yellow d-inline-block"
+                  >
+                    <span class="f-22 font-weight-bold text-yellow mr-4"
+                      >Fit Features</span
+                    >
+                    <i
+                      class="fa fa-angle-right text-yellow next-animate-1"
+                      aria-hidden="true"
+                    ></i>
+                    <i
+                      class="fa fa-angle-right text-yellow next-animate-2"
+                      aria-hidden="true"
+                    ></i>
+                    <i
+                      class="fa fa-angle-right text-yellow next-animate-3"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div
+                    [ngClass]="isLineActiveLogo ? 'right-to-left bb' : ''"
+                    class="bottom-line"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- fit box logo section for desktop and mobile end -->
+      </div>
+      <div class="carousel-item">
+        <div class="bg-black page-background">
+          <!-- fit freedom section for desktop -->
+          <section class="d-none d-md-block">
+            <div class="page-background bg-black">
+              <div class="container page-height-full">
+                <div class="container pt-56 pb-5">
+                  <div class="row mt-4 mt-md-5 pt-0 pt-md-5 fitfreedom">
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <div class="row">
+                        <div class="col-2">
+                          <h4
+                            *ngIf="isLineActiveFreedom"
+                            [ngClass]="
+                              isLineActiveFreedom ? 'left-to-right' : ''
+                            "
+                            class="text-stroke f-62"
+                          >
+                            {{ fitFreedomCardData.number }}
+                          </h4>
+                        </div>
+                        <div
+                          *ngIf="isLineActiveFreedom"
+                          [ngClass]="isLineActiveFreedom ? 'top-to-bottom' : ''"
+                          class="col-1 vl ml-2"
+                        ></div>
+                        <div
+                          *ngIf="isLineActiveFreedom"
+                          [ngClass]="isLineActiveFreedom ? 'bottom-to-top' : ''"
+                          class="col-8 fit-heading mt-3 pt-1"
+                        >
+                          <h4>
+                            <span
+                              class="font-weight-bold text-yellow mr-2 f-42"
+                              >{{ fitFreedomCardData.strokeHead }}</span
+                            ><span class="font-weight-bold text-light f-42">{{
+                              fitFreedomCardData.mainHead
+                            }}</span>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-8"></div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-12 mt-n-30 col-md-6 col-lg-4 fit-image fade-in"
+                    >
+                      <img
+                        *ngIf="isLineActiveFreedom"
+                        [ngClass]="isLineActiveFreedom ? 'fade-in' : ''"
+                        class="fit-image"
+                        src="{{ fitFreedomCardData.image }}"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="pt-4 pt-md-0 col-12 col-md-6 col-lg-8 mt-4 mt-md-0 mx-0"
+                    >
+                      <div
+                        *ngIf="isLineActiveFreedom"
+                        [ngClass]="
+                          isLineActiveFreedom ? 'right-to-left text-light' : ''
+                        "
+                        class="text-black px-0 px-md-3"
+                      >
+                        <div
+                          *ngFor="let fit of fitFreedomCardData.fitList"
+                          class="row"
+                        >
+                          <div class="col-10 col-md-12 col-lg-5">
+                            <p>{{ fit.data }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    *ngIf="isLineActiveFreedom"
+                    [ngClass]="isLineActiveFreedom ? 'right-to-left' : ''"
+                    class="row btm-line mx-5 mt-n-54"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- fit freedom section for desktop end-->
+          <!-- fit freedom section for mobile -->
+          <section class="d-block d-md-none">
+            <div class="page-background bg-black">
+              <div class="container mb-4 page-height-full">
+                <div class="row">
+                  <div
+                    class="col-12 col-md-6 pt-5 col-lg-3 px-0 fitfreedommobile"
+                  >
+                    <div
+                      [ngClass]="
+                        isAnimationActiveFreedomMobile
+                          ? 'bottom-to-top text-stroke'
+                          : ''
+                      "
+                      class="fit-number text-black font-weight-bold px-3"
+                    >
+                      {{ fitFreedomCardData.number }}
+                    </div>
+                    <h1
+                      [ngClass]="
+                        isAnimationActiveFreedomMobile ? 'bottom-to-top' : ''
+                      "
+                      class="d-inline-block font-weight-bold mx-3"
+                    >
+                      <span
+                        [ngClass]="
+                          isAnimationActiveFreedomMobile ? 'text-stroke' : ''
+                        "
+                        class="text-black mr-2"
+                        >{{ fitFreedomCardData.strokeHead }}</span
+                      >
+                      <span
+                        [ngClass]="
+                          isAnimationActiveFreedomMobile ? 'text-light' : ''
+                        "
+                        class="text-black"
+                        >{{ fitFreedomCardData.mainHead }}</span
+                      >
+                      <div
+                        *ngIf="isLineActiveTouchMobile"
+                        [ngClass]="
+                          isLineActiveFlowMobile ? 'left-to-right' : ''
+                        "
+                        class="mobile-bottom-line"
+                      ></div>
+                    </h1>
+                    <div>
+                      <img
+                        class="w-100 mt-4"
+                        src="../../assets/fitImage.png"
+                        alt="fit pay image"
+                      />
+                      <div class="px-3 text-left text-yellow mt-3 px-3">
+                        <div
+                          *ngFor="let fit of fitFreedomCardData.fitList"
+                          class="row"
+                        >
+                          <div class="col-2 text-right">
+                            <img src="../assets/dumbell.svg" alt="Dumbell" />
+                          </div>
+                          <div class="col-10">
+                            <p class="font-weight-bold">
+                              {{ fit.data }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- fit freedom section for mobile end-->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="bg-black page-background">
+          <!-- fit flow section for desktop -->
+          <section class="d-none d-md-block">
+            <div class="d-none d-md-block page-background bg-black">
+              <div class="container page-height-full">
+                <div class="container pt-56 pb-5">
+                  <div class="row mt-4 mt-md-5 pt-0 pt-md-5 fitflow">
+                    <div class="col-12 col-md-6 col-lg-8"></div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <div class="row">
+                        <div class="col-2">
+                          <h4
+                            *ngIf="isLineActiveFlow"
+                            [ngClass]="isLineActiveFlow ? 'left-to-right' : ''"
+                            class="text-stroke f-62"
+                          >
+                            {{ fitFlowCardData.number }}
+                          </h4>
+                        </div>
+                        <div
+                          *ngIf="isLineActiveFlow"
+                          [ngClass]="isLineActiveFlow ? 'top-to-bottom' : ''"
+                          class="col-1 vl ml-2"
+                        ></div>
+                        <div
+                          *ngIf="isLineActiveFlow"
+                          [ngClass]="isLineActiveFlow ? 'right-to-left' : ''"
+                          class="col-8 fit-heading mt-3 pt-1"
+                        >
+                          <h4>
+                            <span
+                              class="font-weight-bold text-yellow mr-2 f-42"
+                              >{{ fitFlowCardData.strokeHead }}</span
+                            ><span class="font-weight-bold text-light f-42">{{
+                              fitFlowCardData.mainHead
+                            }}</span>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="pt-4 pt-md-0 col-12 col-md-6 col-lg-8 mt-2 mx-0"
+                    >
+                      <div
+                        *ngIf="isLineActiveFlow"
+                        [ngClass]="
+                          isLineActiveFlow ? 'left-to-right text-light' : ''
+                        "
+                        class="text-black px-0 px-md-3"
+                      >
+                        <div
+                          *ngFor="let fit of fitFlowCardData.fitList"
+                          class="row"
+                        >
+                          <div class="col-12 text-left text-md-right">
+                            <p>{{ fit.data }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 mt-n-30 col-md-6 col-lg-4 fit-image fade-in"
+                    >
+                      <img
+                        *ngIf="isAnimationActiveFlow"
+                        [ngClass]="isAnimationActiveFlow ? 'fade-in' : ''"
+                        class="fit-image"
+                        src="{{ fitFlowCardData.image }}"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    *ngIf="isLineActiveFlow"
+                    [ngClass]="isLineActiveFlow ? 'left-to-right' : ''"
+                    class="row btm-line mx-5 mt-n-54"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- fit flow section for desktop end-->
+          <!-- fit flow section for mobile -->
+          <section class="d-block d-md-none">
+            <div class="page-background bg-black">
+              <div class="container mb-4 page-height-full">
+                <div class="row">
+                  <div class="col-12 col-md-6 pt-5 col-lg-3 px-0 fitflowmobile">
+                    <div
+                      [ngClass]="
+                        isAnimationActiveFlowMobile
+                          ? 'bottom-to-top text-stroke'
+                          : ''
+                      "
+                      class="fit-number text-black font-weight-bold px-3"
+                    >
+                      {{ fitFlowCardData.number }}
+                    </div>
+                    <h1
+                      [ngClass]="
+                        isAnimationActiveFlowMobile ? 'bottom-to-top' : ''
+                      "
+                      class="d-inline-block font-weight-bold mx-3"
+                    >
+                      <span
+                        [ngClass]="
+                          isAnimationActiveFlowMobile ? 'text-stroke' : ''
+                        "
+                        class="text-black mr-2"
+                        >{{ fitFlowCardData.strokeHead }}</span
+                      >
+                      <span
+                        [ngClass]="
+                          isAnimationActiveFlowMobile ? 'text-light' : ''
+                        "
+                        class="text-black"
+                        >{{ fitFlowCardData.mainHead }}</span
+                      >
+                      <div
+                        *ngIf="isLineActiveFlowMobile"
+                        [ngClass]="
+                          isLineActiveFlowMobile ? 'left-to-right' : ''
+                        "
+                        class="mobile-bottom-line"
+                      ></div>
+                    </h1>
+                    <div>
+                      <img
+                        class="w-100 mt-4"
+                        src="../../assets/fitImage.png"
+                        alt="fit pay image"
+                      />
+                      <div class="px-3 text-left text-yellow mt-3 px-3">
+                        <div
+                          *ngFor="let fit of fitFlowCardData.fitList"
+                          class="row"
+                        >
+                          <div class="col-2 text-right">
+                            <img src="../assets/dumbell.svg" alt="Dumbell" />
+                          </div>
+                          <div class="col-10">
+                            <p class="font-weight-bold">
+                              {{ fit.data }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- fit flow section for mobile end-->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="bg-black page-background">
+          <!-- fit smile section for desktop -->
+          <section class="d-none d-md-block">
+            <div class="page-background bg-black">
+              <div class="container page-height-full">
+                <div class="container pt-56 pb-5">
+                  <div class="row mt-4 mt-md-5 pt-0 pt-md-5 fitsmile">
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <div class="row">
+                        <div class="col-2">
+                          <h4
+                            *ngIf="isLineActiveSmile"
+                            [ngClass]="isLineActiveSmile ? 'left-to-right' : ''"
+                            class="text-stroke f-62"
+                          >
+                            {{ fitSmileCardData.number }}
+                          </h4>
+                        </div>
+                        <div
+                          *ngIf="isLineActiveSmile"
+                          [ngClass]="isLineActiveSmile ? 'top-to-bottom' : ''"
+                          class="col-1 vl ml-2"
+                        ></div>
+                        <div
+                          *ngIf="isLineActiveSmile"
+                          [ngClass]="isLineActiveSmile ? 'bottom-to-top' : ''"
+                          class="col-8 fit-heading mt-3 pt-1"
+                        >
+                          <h4>
+                            <span
+                              class="font-weight-bold text-yellow mr-2 f-42"
+                              >{{ fitSmileCardData.strokeHead }}</span
+                            ><span class="font-weight-bold text-light f-42">{{
+                              fitSmileCardData.mainHead
+                            }}</span>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-8"></div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-12 mt-n-30 col-md-6 col-lg-4 fit-image fade-in"
+                    >
+                      <img
+                        *ngIf="isLineActiveSmile"
+                        [ngClass]="isLineActiveSmile ? 'fade-in' : ''"
+                        class="fit-image"
+                        src="{{ fitSmileCardData.image }}"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="pt-4 pt-md-0 col-12 col-md-6 col-lg-8 mt-4 mt-md-0 mx-0"
+                    >
+                      <div
+                        *ngIf="isLineActiveSmile"
+                        [ngClass]="
+                          isLineActiveSmile ? 'right-to-left text-light' : ''
+                        "
+                        class="text-black px-0 px-md-3"
+                      >
+                        <div
+                          *ngFor="let fit of fitSmileCardData.fitList"
+                          class="row"
+                        >
+                          <div class="col-10 col-md-12 col-lg-5">
+                            <p>{{ fit.data }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    *ngIf="isLineActiveSmile"
+                    [ngClass]="isLineActiveSmile ? 'right-to-left' : ''"
+                    class="row btm-line mx-5 mt-n-54"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- fit smile section for desktop end-->
+          <!-- fit smile section for mobile -->
+          <section class="d-block d-md-none">
+            <div class="page-background bg-black">
+              <div class="container mb-4 page-height-full">
+                <div class="row">
+                  <div
+                    class="col-12 col-md-6 pt-5 col-lg-3 px-0 fitsmilemobile"
+                  >
+                    <div
+                      [ngClass]="
+                        isAnimationActiveSmileMobile
+                          ? 'bottom-to-top text-stroke'
+                          : ''
+                      "
+                      class="fit-number text-black font-weight-bold px-3"
+                    >
+                      {{ fitSmileCardData.number }}
+                    </div>
+                    <h1
+                      [ngClass]="
+                        isAnimationActiveSmileMobile ? 'bottom-to-top' : ''
+                      "
+                      class="d-inline-block font-weight-bold mx-3"
+                    >
+                      <span
+                        [ngClass]="
+                          isAnimationActiveSmileMobile ? 'text-stroke' : ''
+                        "
+                        class="text-black mr-2"
+                        >{{ fitSmileCardData.strokeHead }}</span
+                      >
+                      <span
+                        [ngClass]="
+                          isAnimationActiveSmileMobile ? 'text-light' : ''
+                        "
+                        class="text-black"
+                        >{{ fitSmileCardData.mainHead }}</span
+                      >
+                      <div
+                        *ngIf="isLineActiveSmileMobile"
+                        [ngClass]="
+                          isLineActiveSmileMobile ? 'left-to-right' : ''
+                        "
+                        class="mobile-bottom-line"
+                      ></div>
+                    </h1>
+                    <div>
+                      <img
+                        class="w-100 mt-4"
+                        src="../../assets/fitImage.png"
+                        alt="fit pay image"
+                      />
+                      <div class="px-3 text-left text-yellow mt-3 px-3">
+                        <div
+                          *ngFor="let fit of fitSmileCardData.fitList"
+                          class="row"
+                        >
+                          <div class="col-2 text-right">
+                            <img src="../assets/dumbell.svg" alt="Dumbell" />
+                          </div>
+                          <div class="col-10">
+                            <p class="font-weight-bold">
+                              {{ fit.data }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- fit smile section for mobile end-->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="bg-black page-background">
+          <!-- fit touch section for desktop -->
+          <section class="d-none d-md-block">
+            <div class="d-none d-md-block page-background bg-black">
+              <div class="container page-height-full">
+                <div class="container pt-56 pb-5">
+                  <div class="row mt-4 mt-md-5 pt-0 pt-md-5 fitflow">
+                    <div class="col-12 col-md-6 col-lg-8"></div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <div class="row">
+                        <div class="col-2">
+                          <h4
+                            *ngIf="isLineActiveSmile"
+                            [ngClass]="isLineActiveSmile ? 'left-to-right' : ''"
+                            class="text-stroke f-62"
+                          >
+                            {{ fitTouchCardData.number }}
+                          </h4>
+                        </div>
+                        <div
+                          *ngIf="isLineActiveSmile"
+                          [ngClass]="isLineActiveSmile ? 'top-to-bottom' : ''"
+                          class="col-1 vl ml-2"
+                        ></div>
+                        <div
+                          *ngIf="isLineActiveSmile"
+                          [ngClass]="isLineActiveSmile ? 'right-to-left' : ''"
+                          class="col-8 fit-heading mt-3 pt-1"
+                        >
+                          <h4>
+                            <span
+                              class="font-weight-bold text-yellow mr-2 f-42"
+                              >{{ fitTouchCardData.strokeHead }}</span
+                            ><span class="font-weight-bold text-light f-42">{{
+                              fitTouchCardData.mainHead
+                            }}</span>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="pt-4 pt-md-0 col-12 col-md-6 col-lg-8 mt-2 mx-0"
+                    >
+                      <div
+                        *ngIf="isLineActiveSmile"
+                        [ngClass]="
+                          isLineActiveSmile ? 'left-to-right text-light' : ''
+                        "
+                        class="text-black px-0 px-md-3"
+                      >
+                        <div
+                          *ngFor="let fit of fitTouchCardData.fitList"
+                          class="row"
+                        >
+                          <div class="col-12 text-left text-md-right">
+                            <p>{{ fit.data }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 mt-n-30 col-md-6 col-lg-4 fit-image fade-in"
+                    >
+                      <img
+                        *ngIf="isAnimationActiveTouch"
+                        [ngClass]="isAnimationActiveTouch ? 'fade-in' : ''"
+                        class="fit-image"
+                        src="{{ fitTouchCardData.image }}"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    *ngIf="isLineActiveTouch"
+                    [ngClass]="isLineActiveTouch ? 'left-to-right' : ''"
+                    class="row btm-line mx-5 mt-n-54"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- fit touch section for desktop end-->
+          <!-- fit touch section for mobile -->
+          <section class="d-block d-md-none">
+            <div class="page-background bg-black">
+              <div class="container mb-4 page-height-full">
+                <div class="row">
+                  <div
+                    class="col-12 col-md-6 pt-5 col-lg-3 px-0 fittouchmobile"
+                  >
+                    <div
+                      [ngClass]="
+                        isAnimationActiveTouchMobile
+                          ? 'bottom-to-top text-stroke'
+                          : ''
+                      "
+                      class="fit-number text-black font-weight-bold px-3"
+                    >
+                      {{ fitTouchCardData.number }}
+                    </div>
+                    <h1
+                      [ngClass]="
+                        isAnimationActiveTouchMobile ? 'bottom-to-top' : ''
+                      "
+                      class="d-inline-block font-weight-bold mx-3"
+                    >
+                      <span
+                        [ngClass]="
+                          isAnimationActiveTouchMobile ? 'text-stroke' : ''
+                        "
+                        class="text-black mr-2"
+                        >{{ fitTouchCardData.strokeHead }}</span
+                      >
+                      <span
+                        [ngClass]="
+                          isAnimationActiveTouchMobile ? 'text-light' : ''
+                        "
+                        class="text-black"
+                        >{{ fitTouchCardData.mainHead }}</span
+                      >
+                      <div
+                        *ngIf="isLineActiveTouchMobile"
+                        [ngClass]="
+                          isLineActiveTouchMobile ? 'left-to-right' : ''
+                        "
+                        class="mobile-bottom-line"
+                      ></div>
+                    </h1>
+                    <div>
+                      <img
+                        class="w-100 mt-4"
+                        src="../../assets/fitImage.png"
+                        alt="fit pay image"
+                      />
+                      <div class="px-3 text-left text-yellow mt-3 px-3">
+                        <div
+                          *ngFor="let fit of fitTouchCardData.fitList"
+                          class="row"
+                        >
+                          <div class="col-2 text-right">
+                            <img src="../assets/dumbell.svg" alt="Dumbell" />
+                          </div>
+                          <div class="col-10">
+                            <p class="font-weight-bold">
+                              {{ fit.data }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- fit touch section for mobile end-->
+        </div>
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

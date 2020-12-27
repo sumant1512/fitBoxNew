@@ -1,5 +1,9 @@
 <div class="d-none d-md-block page-background bg-black">
-  <div class="top-0 w-100 bottom-0 position-absolute">
+  <div
+    *ngIf="isLineActive"
+    [ngClass]="isLineActive ? 'top-to-bottom' : ''"
+    class="top-0 w-100 bottom-0 position-absolute"
+  >
     <div class="row mx-0">
       <div class="col-6 px-0">
         <div class="vertical-line"></div>
@@ -105,7 +109,11 @@
 
 <!-- for mobile -->
 <div class="d-static d-md-none page-background bg-black">
-  <div class="top-0 w-100 bottom-0 position-absolute">
+  <div
+    *ngIf="isLineActive"
+    [ngClass]="isLineActive ? 'top-to-bottom' : ''"
+    class="top-0 w-100 bottom-0 position-absolute"
+  >
     <div class="row mx-0">
       <div class="col-6 px-0">
         <div class="vertical-line"></div>

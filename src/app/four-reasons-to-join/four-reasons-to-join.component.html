@@ -1,136 +1,144 @@
 <div class="page-background bg-black">
-    <div class="top-0 w-100 bottom-0 position-absolute">
-      <div class="row mx-0">
-        <div class="col-6 px-0">
-          <div class="vertical-line"></div>
-        </div>
-        <div class="col-6"></div>
+  <div
+    *ngIf="isLineActive"
+    [ngClass]="isLineActive ? 'top-to-bottom' : ''"
+    class="top-0 w-100 bottom-0 position-absolute"
+  >
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
       </div>
-      <div class="row mx-0">
-        <div class="col-12 text-center">
-          <span (click)="scrollToPage('whyfitbox')" class="pointer text-light f-12"
-            >Previous</span
-          >
-        </div>
-      </div>
+      <div class="col-6"></div>
     </div>
-    <div class="container page-height-full">
-      <div class="container box-align pb-5">
-        <div
-          class="row text-center text-md-left py-3 px-0 px-md-4 heading-border reasonstojoin"
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span
+          (click)="scrollToPage('whyfitbox')"
+          class="pointer text-light f-12"
+          >Previous</span
         >
-          <div class="col-12 text-center">
-            <h1
-              [ngClass]="isAnimationActive ? 'bottom-to-top text-light' : ''"
-              class="d-inline-block orbitron font-weight-bold text-black"
-            >
-              <span>4 Resons To Join </span>
-              <span
-                [ngClass]="isLineActive ? 'right-to-left text-yellow' : ''"
-                class="text-black"
-                >FITBOX</span
-              >
-              <div
-                *ngIf="isLineActive"
-                [ngClass]="isLineActive ? 'left-to-right' : ''"
-                class="bottom-line"
-              ></div>
-            </h1>
-          </div>
-        </div>
-        <div class="row my-3 text-center">
-          <div class="col-12 col-md-3">
-            <h5
-              [ngClass]="isAnimationActive ? 'left-to-right' : ''"
-              (click)="scrollToPage('reasonone')"
-              class="font-weight-bold orbitron"
-            >
-              <span
-                [ngClass]="isAnimationActive ? 'text-yellow' : ''"
-                class="text-black"
-                >Fit</span
-              >
-              <span
-                [ngClass]="isAnimationActive ? 'text-light' : ''"
-                class="text-black"
-              >
-                Freedom</span
-              >
-            </h5>
-          </div>
-          <div class="col-12 col-md-3">
-            <h5
-              [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-              (click)="scrollToPage('reasontwo')"
-              class="font-weight-bold orbitron"
-            >
-              <span
-                [ngClass]="isAnimationActive ? 'text-yellow' : ''"
-                class="text-black"
-                >Fit</span
-              >
-              <span
-                [ngClass]="isAnimationActive ? 'text-light' : ''"
-                class="text-black"
-              >
-                Flow</span
-              >
-            </h5>
-          </div>
-          <div class="col-12 col-md-3">
-            <h5
-              [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-              (click)="scrollToPage('reasonthree')"
-              class="font-weight-bold orbitron"
-            >
-              <span
-                [ngClass]="isAnimationActive ? 'text-yellow' : ''"
-                class="text-black"
-                >Fit</span
-              >
-              <span
-                [ngClass]="isAnimationActive ? 'text-light' : ''"
-                class="text-black"
-              >
-                Smile</span
-              >
-            </h5>
-          </div>
-          <div class="col-12 col-md-3">
-            <h5
-              [ngClass]="isAnimationActive ? 'right-to-left' : ''"
-              (click)="scrollToPage('reasonfour')"
-              class="font-weight-bold orbitron"
-            >
-              <span
-                [ngClass]="isAnimationActive ? 'text-yellow' : ''"
-                class="text-black"
-                >Fit</span
-              >
-              <span
-                [ngClass]="isAnimationActive ? 'text-light' : ''"
-                class="text-black"
-              >
-                Touch</span
-              >
-            </h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bottom-0 w-100 bottom-0 position-absolute">
-      <div class="row mx-0">
-        <div class="col-12 text-center">
-          <span (click)="scrollToPage('reasonone')" class="pointer text-light f-12"
-            >Next</span
-          >
-        </div>
-      </div>
-      <div class="row mx-0">
-        <div class="col-6 px-0">
-          <div class="vertical-line"></div>
-        </div>
-        <div class="col-6"></div>
       </div>
     </div>
   </div>
+  <div class="container page-height-full">
+    <div class="container box-align pb-5">
+      <div
+        class="row text-center text-md-left py-3 px-0 px-md-4 heading-border reasonstojoin"
+      >
+        <div class="col-12 text-center">
+          <h1
+            [ngClass]="isAnimationActive ? 'bottom-to-top text-light' : ''"
+            class="d-inline-block orbitron font-weight-bold text-black"
+          >
+            <span>4 Resons To Join </span>
+            <span
+              [ngClass]="isLineActive ? 'right-to-left text-yellow' : ''"
+              class="text-black"
+              >FITBOX</span
+            >
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'left-to-right' : ''"
+              class="bottom-line"
+            ></div>
+          </h1>
+        </div>
+      </div>
+      <div class="row my-3 text-md-center">
+        <div class="col-12 col-md-3">
+          <h4
+            [ngClass]="isAnimationActive ? 'left-to-right' : ''"
+            (click)="scrollToPage('reasonone')"
+            class="font-weight-bold orbitron"
+          >
+            <span
+              [ngClass]="isAnimationActive ? 'text-yellow' : ''"
+              class="text-black"
+              >Fit</span
+            >
+            <span
+              [ngClass]="isAnimationActive ? 'text-light' : ''"
+              class="text-black"
+            >
+              Freedom</span
+            >
+          </h4>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4
+            [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+            (click)="scrollToPage('reasontwo')"
+            class="font-weight-bold orbitron"
+          >
+            <span
+              [ngClass]="isAnimationActive ? 'text-yellow' : ''"
+              class="text-black"
+              >Fit</span
+            >
+            <span
+              [ngClass]="isAnimationActive ? 'text-light' : ''"
+              class="text-black"
+            >
+              Flow</span
+            >
+          </h4>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4
+            [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+            (click)="scrollToPage('reasonthree')"
+            class="font-weight-bold orbitron"
+          >
+            <span
+              [ngClass]="isAnimationActive ? 'text-yellow' : ''"
+              class="text-black"
+              >Fit</span
+            >
+            <span
+              [ngClass]="isAnimationActive ? 'text-light' : ''"
+              class="text-black"
+            >
+              Smile</span
+            >
+          </h4>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4
+            [ngClass]="isAnimationActive ? 'right-to-left' : ''"
+            (click)="scrollToPage('reasonfour')"
+            class="font-weight-bold orbitron"
+          >
+            <span
+              [ngClass]="isAnimationActive ? 'text-yellow' : ''"
+              class="text-black"
+              >Fit</span
+            >
+            <span
+              [ngClass]="isAnimationActive ? 'text-light' : ''"
+              class="text-black"
+            >
+              Touch</span
+            >
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span
+          (click)="scrollToPage('reasonone')"
+          class="pointer text-light f-12"
+          >Next</span
+        >
+      </div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+  </div>
+</div>

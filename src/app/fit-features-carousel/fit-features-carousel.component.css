@@ -1,0 +1,167 @@
+/* css of fit box logo end */
+.top-line {
+  display: block;
+  height: 1px;
+  border-top: 0.5px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.bt {
+  border-top: 0.5px solid #b2b2b2;
+}
+
+.bottom-line {
+  display: block;
+  height: 1px;
+  border-top: 0.5px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.bb {
+  border-bottom: 0.5px solid #b2b2b2;
+}
+
+.mobile-bottom-line {
+  display: block;
+  height: 1px;
+  border-top: 0.5px solid #b2b2b2;
+}
+
+.next-animate-1 {
+  position: relative;
+  animation: nextMoveOne 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes nextMoveOne {
+  0% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes nextMoveOne {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.next-animate-2 {
+  position: relative;
+  animation: nextMoveTwo 1s ease-in-out infinite 0.1s;
+}
+
+@-webkit-keyframes nextMoveTwo {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes nextMoveTwo {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.next-animate-3 {
+  position: relative;
+  animation: nextMoveThree 1s ease-in-out infinite 0.2s;
+}
+
+@-webkit-keyframes nextMoveThree {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes nextMoveThree {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.logo-sub-content {
+  font-size: 18px;
+  float: right;
+  border-bottom: 1px solid white;
+}
+
+@media only screen and (min-width: 30px) and (max-width: 767px) {
+  .top-line {
+    display: block;
+    height: 1px;
+    border-top: 2px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 30%;
+  }
+
+  .bt {
+    border-top: 0.5px solid #b2b2b2;
+  }
+
+  .bottom-line {
+    display: block;
+    height: 1px;
+    border-top: 2px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 30%;
+  }
+
+  .bb {
+    border-bottom: 0.5px solid #b2b2b2;
+  }
+}
+
+/* css of fit box logo end */
+
+.vl {
+  border-left: 1px solid #fad331;
+  height: 70px;
+}
+
+.fit-heading {
+  margin-left: -24px;
+}
+
+.fit-image {
+  width: 100%;
+  height: 322px;
+}
+
+.btm-line {
+  border-bottom: 0.5px solid #979d00;
+}

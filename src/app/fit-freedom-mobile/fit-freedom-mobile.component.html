@@ -1,5 +1,9 @@
 <div class="page-background bg-black">
-  <div class="top-0 w-100 bottom-0 position-absolute">
+  <div
+    *ngIf="isLineActive"
+    [ngClass]="isLineActive ? 'top-to-bottom' : ''"
+    class="top-0 w-100 bottom-0 position-absolute"
+  >
     <div class="row mx-0">
       <div class="col-6 px-0">
         <div class="vertical-line"></div>
@@ -8,7 +12,9 @@
     </div>
     <div class="row mx-0">
       <div class="col-12 text-center">
-        <span (click)="scrollToPage('reasonstojoin')" class="pointer text-light f-12"
+        <span
+          (click)="scrollToPage('reasonstojoin')"
+          class="pointer text-light f-12"
           >Previous</span
         >
       </div>
@@ -72,7 +78,9 @@
   <div class="bottom-0 w-100 bottom-0 position-absolute">
     <div class="row mx-0">
       <div class="col-12 text-center">
-        <span (click)="scrollToPage('reasontwo')" class="pointer text-light f-12"
+        <span
+          (click)="scrollToPage('reasontwo')"
+          class="pointer text-light f-12"
           >Next</span
         >
       </div>
