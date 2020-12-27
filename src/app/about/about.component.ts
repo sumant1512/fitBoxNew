@@ -1,3 +1,4 @@
+import { ViewportScroller } from "@angular/common";
 import { Component, ElementRef, HostListener, OnInit } from "@angular/core";
 import { ToggleStatusEmit } from "../data.type";
 import { isInViewport } from "../view-port-check";
@@ -10,7 +11,10 @@ import { isInViewport } from "../view-port-check";
 export class AboutComponent implements OnInit {
   isAnimationActive = false;
   isLineActive = false;
-  constructor(public el: ElementRef) {}
+  constructor(
+    public el: ElementRef,
+    private viewPortScroller: ViewportScroller
+  ) {}
 
   ngOnInit() {
     console.log(window.pageYOffset);
@@ -36,12 +40,21 @@ export class AboutComponent implements OnInit {
           window.scrollTo({ top: 250, behavior: "smooth" });
         }, 1);
         break;
-      default:
-        setTimeout(() => {
+      case "fitFounder":
+        var topPosition = document
+          .getElementById(selectedPage.selectedPage)
+          .getBoundingClientRect().top;
+        var pagePosition =
           document
             .getElementById(selectedPage.selectedPage)
-            .scrollIntoView({ behavior: "smooth" });
-        }, 1);
+            .getBoundingClientRect().top + window.scrollY;
+        var scrollPosition =
+          topPosition <= 600 ? pagePosition - 86 : pagePosition - 156;
+        window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+        break;
+      default:
+        this.viewPortScroller.scrollToAnchor(selectedPage.selectedPage);
+        break;
     }
   }
 
