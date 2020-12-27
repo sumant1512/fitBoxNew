@@ -1,5 +1,9 @@
 <div class="page-background bg-black">
-  <div class="top-0 w-100 bottom-0 position-absolute">
+  <div
+    *ngIf="isLineActive"
+    [ngClass]="isLineActive ? 'top-to-bottom' : ''"
+    class="top-0 w-100 bottom-0 position-absolute"
+  >
     <div class="row mx-0">
       <div class="col-6 px-0">
         <div class="vertical-line"></div>
@@ -53,7 +57,8 @@
             [ngClass]="isLineActive ? 'bottom-to-top' : ''"
             class="w-100 mt-4 mt-md-5 text-center"
           >
-            <object class="box-shadow"
+            <object
+              class="box-shadow"
               data="https://www.youtube.com/v/rKDOL2x1mB4&feature=youtu.be"
             ></object>
           </div>
@@ -64,7 +69,9 @@
   <div class="bottom-0 w-100 bottom-0 position-absolute">
     <div class="row mx-0">
       <div class="col-12 text-center">
-        <span (click)="scrollToPage('reasonstojoin')" class="pointer text-light f-12"
+        <span
+          (click)="scrollToPage('reasonstojoin')"
+          class="pointer text-light f-12"
           >Next</span
         >
       </div>

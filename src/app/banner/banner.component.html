@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-6">
         <img
-          class="img-fluid logo mt-3"
+          class="left-to-right img-fluid logo mt-3"
           src="../../assets/fitBoxYellow.svg"
           alt=""
         />
@@ -11,7 +11,7 @@
       <div class="col-6">
         <h2
           (click)="navToggle()"
-          class="orbitron text-yellow font-weight-bold text-right mt-3"
+          class="right-to-left orbitron text-yellow font-weight-bold text-right mt-3"
         >
           About
         </h2>
@@ -20,15 +20,17 @@
     <div class="row text-center text-md-left">
       <div class="col-12 col-md-2"></div>
       <div class="col-12 col-md-8">
-        <div class="mt-5 pt-5 text-light">
+        <div class="mt-5 pt-5 top-to-bottom text-light">
           <h2 class="font-weight-bold">
             If you want your new year to be extra-ordinary,
           </h2>
           <h2 class="font-weight-bold">Do not join an ordinary gym.</h2>
         </div>
         <div class="d-inline-block">
-          <h1 class="orbitron font-weight-bold text-yellow">Join FITBOX</h1>
-          <div class="bottom-line"></div>
+          <h1 class="orbitron left-to-right font-weight-bold text-yellow">
+            Join FITBOX
+          </h1>
+          <div class="bottom-line bottom-to-top"></div>
         </div>
       </div>
     </div>
@@ -39,7 +41,7 @@
           <button
             (click)="scrollToPage('whyfitbox')"
             type="submit"
-            class="orbitron py-2 px-4 btn features-btn text-yellow"
+            class="bottom-to-top orbitron py-2 px-4 btn features-btn text-yellow"
           >
             See our features
           </button>
@@ -68,7 +70,9 @@
   <div class="bottom-0 w-100 bottom-0 position-absolute">
     <div class="row mx-0">
       <div class="col-12 text-center">
-        <span (click)="scrollToPage('whyfitbox')" class="pointer text-light f-12"
+        <span
+          (click)="scrollToPage('whyfitbox')"
+          class="pointer text-light f-12"
           >Next</span
         >
       </div>

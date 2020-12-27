@@ -1,5 +1,9 @@
 <div class="page-background bg-black">
-  <div class="top-0 w-100 bottom-0 position-absolute">
+  <div
+    *ngIf="isLineActive"
+    [ngClass]="isLineActive ? 'top-to-bottom' : ''"
+    class="top-0 w-100 bottom-0 position-absolute"
+  >
     <div class="row mx-0">
       <div class="col-6 px-0">
         <div class="vertical-line"></div>
@@ -57,9 +61,9 @@
         <div class="col-12 mt-n-30 col-md-6 col-lg-4 fit-image fade-in">
           <img
             *ngIf="isLineActive"
-            [ngClass]="isLineActive ? 'bottom-to-top' : ''"
+            [ngClass]="isLineActive ? 'fade-in' : ''"
             class="fit-image"
-            src="{{fitCardData.image}}"
+            src="{{ fitCardData.image }}"
             alt=""
           />
         </div>

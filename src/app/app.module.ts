@@ -28,6 +28,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { CareerComponent } from './career/career.component';
 import { FitFounderComponent } from './fit-founder/fit-founder.component';
+import { FitFeaturesCarouselComponent } from './fit-features-carousel/fit-features-carousel.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { FitFounderComponent } from './fit-founder/fit-founder.component';
     HeaderComponent,
     CareerComponent,
     FitFounderComponent,
+    FitFeaturesCarouselComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
