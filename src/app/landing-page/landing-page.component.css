@@ -4,33 +4,58 @@
 }
 .spacer {
   width: 0;
-  height: 600px;
+  height: 100vh;
   float: left;
   clear: both;
 }
 .one {
-  background: red;
   width: 100%;
   height: 100vh;
-  position: relative;
+  position: fixed;
   float: left;
 }
 .two {
-  background: blue;
   width: 100%;
   height: 100vh;
   position: relative;
   float: left;
 }
 .three {
-  background: green;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+.four {
   width: 100%;
   height: 100vh;
   position: relative;
   float: left;
 }
-.four {
-  background: yellow;
+.five {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  float: left;
+}
+.six {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  float: left;
+}
+.seven {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  float: left;
+}
+.eight {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  float: left;
+}
+.nine {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -39,5 +64,5 @@
 .latched {
   position: fixed;
   top: 0;
-  width: auto;
+  width: 100%;
 }

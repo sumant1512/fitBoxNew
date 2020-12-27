@@ -1,0 +1,87 @@
+<div class="page-background bg-black">
+  <div class="top-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span (click)="scrollToPage('reasonone')" class="pointer text-light f-12"
+          >Previous</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="container mb-4 page-height-full">
+    <div class="row">
+      <div class="col-12 col-md-6 pt-5 col-lg-3 px-0 fitflowmobile">
+        <div
+          [ngClass]="isAnimationActive ? 'bottom-to-top text-stroke' : ''"
+          class="fit-number text-black font-weight-bold px-3"
+        >
+          {{ fitCardData.number }}
+        </div>
+        <h1
+          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+          class="d-inline-block font-weight-bold mx-3"
+        >
+          <span
+            [ngClass]="isAnimationActive ? 'text-stroke' : ''"
+            class="text-black mr-2"
+            >{{ fitCardData.strokeHead }}</span
+          >
+          <span
+            [ngClass]="isAnimationActive ? 'text-light' : ''"
+            class="text-black"
+            >{{ fitCardData.mainHead }}</span
+          >
+        </h1>
+        <div class="row mx-0">
+          <div class="col-9 mb-4">
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'left-to-right' : ''"
+              class="mr-4 bottom-line"
+            ></div>
+          </div>
+        </div>
+        <div>
+          <img
+            class="w-100 mt-4"
+            src="../../assets/fitImage.png"
+            alt="fit pay image"
+          />
+          <div class="px-3 text-left text-yellow mt-3 px-3">
+            <div *ngFor="let fit of fitCardData.fitList" class="row">
+              <div class="col-2 text-right">
+                <img src="../assets/dumbell.svg" alt="Dumbell" />
+              </div>
+              <div class="col-10">
+                <p class="font-weight-bold">
+                  {{ fit.data }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span (click)="scrollToPage('reasonthree')" class="pointer text-light f-12"
+          >Next</span
+        >
+      </div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+  </div>
+</div>

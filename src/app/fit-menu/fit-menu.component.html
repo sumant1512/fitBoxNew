@@ -1,0 +1,101 @@
+<div class="bg-black page-background-normal">
+  <div class="container pt-5">
+    <div class="container">
+      <div
+        class="text-center row py-3 px-0 mb-3 px-md-4 heading-border fitmenu"
+      >
+        <div class="col-12">
+          <h1 class="d-inline-block orbitron font-weight-bold text-black">
+            <span class="orbitron">
+              <span
+                [ngClass]="isAnimationActive ? 'left-to-right text-yellow' : ''"
+                class="text-black"
+              >
+                Fit
+              </span>
+              <span
+                [ngClass]="isAnimationActive ? 'right-to-left text-light' : ''"
+                class="text-black"
+              >
+                Menu</span
+              >
+            </span>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'bottom-to-top' : ''"
+              class="bottom-line"
+            ></div>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="row px-0 px-md-3 px-lg-5">
+      <div class="px-3 px-lg-1 col-12 col-md-6 col-lg-3">
+        <div class="mb-5">
+          <img
+            class="w-100 price-boder price-1 mt-4"
+            src="../../assets/carousel/BannerImage2.png"
+            alt="fit pay image"
+          />
+        </div>
+      </div>
+      <div class="px-3 px-lg-1 col-12 col-md-6 col-lg-3">
+        <div class="mb-5">
+          <img
+            class="w-100 price-boder price-1 mt-4"
+            src="../../assets/carousel/BannerImage2.png"
+            alt="fit pay image"
+          />
+        </div>
+      </div>
+      <div class="px-3 px-lg-1 col-12 col-md-6 col-lg-3">
+        <div class="mb-5">
+          <img
+            class="w-100 price-boder price-1 mt-4"
+            src="../../assets/carousel/BannerImage2.png"
+            alt="fit pay image"
+          />
+        </div>
+      </div>
+      <div class="px-3 px-lg-1 col-12 col-md-6 col-lg-3">
+        <div class="mb-5">
+          <img
+            class="w-100 price-boder price-1 mt-4"
+            src="../../assets/carousel/BannerImage2.png"
+            alt="fit pay image"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row px-0 px-md-3 px-lg-5">
+      <div class="col-12 col-md-5">
+        <p class="font-weight-bold text-yellow">
+          Download the Fit-Menu with plan comparison and offers in PDF on
+          Whatsapp
+        </p>
+      </div>
+      <div class="col-12 col-md-5 pl-lg-5">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span
+                class="bg-place-holder input-border text-light input-group-text"
+                id="inputGroup-sizing-default"
+                >+91</span
+              >
+            </div>
+            <input
+              type="text"
+              formControlName="name"
+              class="bg-place-holder text-light shadow-none input-border h-auto form-control"
+              placeholder="Enter your Whatsapp number"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 mb-5">
+        <button class="btn bg-transparent fit-menu-btn">Get Fit-Menu</button>
+      </div>
+    </div>
+  </div>
+</div>

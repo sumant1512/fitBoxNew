@@ -1,0 +1,62 @@
+<div class="bg-body">
+  <div class="container">
+    <div class="row careers mt-5 mb-0 mb-md-4">
+      <div class="col-12 col-md-6">
+        <h4
+          *ngIf="isAnimationActive"
+          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+          class="d-inline-block font-weight-bold text-light"
+        >
+          <span>Connect with</span>
+          <span class="text-yellow"> Fitbox Linkedin</span>
+          <i class="text-yellow fa fa-linkedin-square ml-2"></i>
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right' : ''"
+            class="bottom-line"
+          ></div>
+        </h4>
+      </div>
+      <div class="col-12 col-md-6 mt-4 mt-md-0">
+        <h4
+          *ngIf="isAnimationActive"
+          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+          class="d-inline-block font-weight-bold text-light"
+        >
+          <span>Careers</span>
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right' : ''"
+            class="bottom-line"
+          ></div>
+        </h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 mb-2">
+        <h5 class="text-light mt-2">
+          Interested to be a part of the team drop in your email id:
+        </h5>
+      </div>
+      <div class="col-12 col-md-5">
+        <div class="row">
+          <div class="col-12 col-md-10">
+            <div class="form-group">
+              <div class="input-group pr-4">
+                <input
+                  type="text"
+                  formControlName="name"
+                  class="bg-place-holder text-light shadow-none input-border h-auto form-control"
+                  placeholder="Enter your email address to subscribe"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-2 mb-5">
+            <button class="btn bg-transparent fit-menu-btn px-4">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

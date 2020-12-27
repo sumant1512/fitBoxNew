@@ -1,1 +1,83 @@
-<p>about works!</p>
+<app-header (toggleStatus)="toggleforHeader($event)"></app-header>
+<div class="background">
+  <div class="container">
+    <div class="row" id="mission">
+      <div class="col-12 mission">
+        <h1
+          class="bottom-to-top mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold light-yellow"
+        >
+          <span>Mission</span>
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right' : ''"
+            class="bottom-line"
+          ></div>
+        </h1>
+      </div>
+      <div class="col-12">
+        <h5 class="bottom-to-top">
+          <span class="text-yellow">“Acquire 70% Market Share” </span>
+          <span class="text-light"
+            >of the Indian Fitness Center Industry by 2026.</span
+          >
+        </h5>
+      </div>
+    </div>
+    <div class="row" id="vision">
+      <div class="col-12 mission">
+        <h1
+          class="bottom-to-top mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold light-yellow"
+        >
+          <span>Vision</span>
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right' : ''"
+            class="bottom-line"
+          ></div>
+        </h1>
+      </div>
+      <div class="col-12">
+        <h5 class="bottom-to-top">
+          <span class="text-light"
+            >The World Doesn’t Need another Fitness Brand, It Needs a
+          </span>
+          <span class="text-yellow">Revolution.</span>
+        </h5>
+      </div>
+    </div>
+    <div class="row" id="goals">
+      <div class="col-12 mission">
+        <h1
+          class="bottom-to-top mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold light-yellow"
+        >
+          <span>Goals</span>
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right' : ''"
+            class="bottom-line"
+          ></div>
+        </h1>
+      </div>
+      <div class="col-12">
+        <h5 class="bottom-to-top">
+          <span class="text-light"
+            >Make sure Fitness Experts are paid
+            <span class="text-yellow"> “More” </span>than MBA & Engineers
+          </span>
+        </h5>
+        <h5 class="bottom-to-top my-3">
+          <span class="text-light"
+            >1000 Gyms in<span class="text-yellow"> 1000 </span>Days
+          </span>
+        </h5>
+        <h5 class="bottom-to-top my-3">
+          <span class="text-light"
+            >World’s 1st<span class="text-yellow"> Solo </span>Billionaire
+          </span>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+<app-fit-founder id="fitFounder"></app-fit-founder>
+<app-career id="careers"></app-career>

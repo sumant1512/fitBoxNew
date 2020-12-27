@@ -1,0 +1,48 @@
+<div class="page-background bg-black">
+  <div class="container mb-4 page-height">
+    <div class="row">
+      <div class="col-12 fitlogo">
+        <div
+          [ngClass]="isLineActive ? 'left-to-right bt' : ''"
+          class="top-line"
+        ></div>
+      </div>
+      <div class="col-12">
+        <div class="text-center">
+          <img
+            src="../../assets/largeFitBox.png"
+            class="img-fluid fade-in"
+            alt="Responsive image"
+          />
+        </div>
+        <div
+          class="text-light logo-sub-content mt-3 text-yellow d-inline-block"
+        >
+          <span class="f-22 font-weight-bold text-yellow mr-4"
+            >Fit Features</span
+          >
+          <i
+            class="fa fa-angle-right text-yellow next-animate-1"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="fa fa-angle-right text-yellow next-animate-2"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="fa fa-angle-right text-yellow next-animate-3"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div
+          [ngClass]="isLineActive ? 'right-to-left bb' : ''"
+          class="bottom-line"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>

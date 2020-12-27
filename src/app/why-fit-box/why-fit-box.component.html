@@ -1,0 +1,79 @@
+<div class="page-background bg-black">
+  <div class="top-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span (click)="scrollToPage('banner')" class="pointer text-light f-12"
+          >Previous</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="container page-height-full">
+    <div class="container pt-56 pb-5">
+      <div
+        class="text-center text-md-left row py-3 px-0 px-md-4 heading-border whyfitbox"
+      >
+        <div class="col-12 col-md-5 text-center text-md-right">
+          <h1
+            [ngClass]="isAnimationActive ? 'left-to-right text-yellow' : ''"
+            class="d-inline-block orbitron font-weight-bold text-black"
+          >
+            <span>Why FitBox?</span>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'bottom-to-top' : ''"
+              class="bottom-line"
+            ></div>
+          </h1>
+        </div>
+        <div
+          *ngIf="isAnimationActive"
+          [ngClass]="isAnimationActive ? 'top-to-bottom' : ''"
+          class="d-none d-md-block col-md-1 vl"
+        ></div>
+        <div
+          *ngIf="isAnimationActive"
+          [ngClass]="isAnimationActive ? 'right-to-left text-yellow' : ''"
+          class="col-12 text-center text-md-left mt-3 mt-md-0 col-md-6 text-light"
+        >
+          <h5>We get it, Fitness can be intimidating.</h5>
+          <h5>Watch this video</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mt-3 px-0">
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'bottom-to-top' : ''"
+            class="w-100 mt-4 mt-md-5 text-center"
+          >
+            <object class="box-shadow"
+              data="https://www.youtube.com/v/rKDOL2x1mB4&feature=youtu.be"
+            ></object>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span (click)="scrollToPage('reasonstojoin')" class="pointer text-light f-12"
+          >Next</span
+        >
+      </div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+  </div>
+</div>

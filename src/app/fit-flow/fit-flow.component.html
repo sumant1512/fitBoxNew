@@ -1,0 +1,200 @@
+<div class="d-none d-md-block page-background bg-black">
+  <div class="top-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span
+          (click)="scrollToPage('reasonone')"
+          class="pointer text-light f-12"
+          >Previous</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="container page-height-full">
+    <div class="container pt-56 pb-5">
+      <div class="row mt-4 fitflow">
+        <div class="col-12 col-md-6 col-lg-8"></div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="row">
+            <div class="col-2">
+              <h4
+                *ngIf="isLineActive"
+                [ngClass]="isLineActive ? 'left-to-right' : ''"
+                class="text-stroke f-62"
+              >
+                {{ fitCardData.number }}
+              </h4>
+            </div>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'top-to-bottom' : ''"
+              class="col-1 vl ml-2"
+            ></div>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'right-to-left' : ''"
+              class="col-8 fit-heading mt-3 pt-1"
+            >
+              <h4>
+                <span class="font-weight-bold text-yellow mr-2 f-42">{{
+                  fitCardData.strokeHead
+                }}</span
+                ><span class="font-weight-bold text-light f-42">{{
+                  fitCardData.mainHead
+                }}</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pt-4 pt-md-0 col-12 col-md-6 col-lg-8 mt-4 mx-0">
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right text-light' : ''"
+            class="text-black px-0 px-md-3"
+          >
+            <div *ngFor="let fit of fitCardData.fitList" class="row">
+              <div class="col-12 text-left text-md-right">
+                <p>{{ fit.data }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 fit-image fade-in">
+          <img
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'bottom-to-top' : ''"
+            class="fit-image"
+            src="{{ fitCardData.image }}"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span
+          (click)="scrollToPage('reasonthree')"
+          class="pointer text-light f-12"
+          >Next</span
+        >
+      </div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+  </div>
+</div>
+
+<!-- for mobile -->
+<div class="d-static d-md-none page-background bg-black">
+  <div class="top-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span
+          (click)="scrollToPage('reasonone')"
+          class="pointer text-light f-12"
+          >Previous</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="container page-height-full">
+    <div class="container pt-56 pb-5">
+      <div class="row mt-4 fitflow">
+        <div class="col-12 col-md-6 col-lg-8"></div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="row">
+            <div class="col-2">
+              <h4
+                *ngIf="isLineActive"
+                [ngClass]="isLineActive ? 'left-to-right' : ''"
+                class="text-stroke f-62"
+              >
+                {{ fitCardData.number }}
+              </h4>
+            </div>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'top-to-bottom' : ''"
+              class="col-1 vl ml-2"
+            ></div>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'right-to-left' : ''"
+              class="col-8 fit-heading mt-3 pt-1"
+            >
+              <h4>
+                <span class="font-weight-bold text-yellow mr-2 f-42">{{
+                  fitCardData.strokeHead
+                }}</span
+                ><span class="font-weight-bold text-light f-42">{{
+                  fitCardData.mainHead
+                }}</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 fit-image fade-in">
+          <img
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'bottom-to-top' : ''"
+            class="fit-image"
+            src="{{ fitCardData.image }}"
+            alt=""
+          />
+        </div>
+        <div class="pt-4 pt-md-0 col-12 col-md-6 col-lg-8 mx-0">
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right text-light' : ''"
+            class="text-black px-0 px-md-3"
+          >
+            <div *ngFor="let fit of fitCardData.fitList" class="row">
+              <div class="col-12 text-left text-md-right">
+                <p>{{ fit.data }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-0 w-100 bottom-0 position-absolute">
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <span
+          (click)="scrollToPage('reasonthree')"
+          class="pointer text-light f-12"
+          >Next</span
+        >
+      </div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-6 px-0">
+        <div class="vertical-line"></div>
+      </div>
+      <div class="col-6"></div>
+    </div>
+  </div>
+</div>
