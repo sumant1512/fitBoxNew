@@ -35,9 +35,6 @@ export class FitFreedomComponent implements OnInit {
       setTimeout(() => {
         this.isLineActive = true;
       }, 300);
-      setTimeout(() => {
-        fitfreedom.classList.add("heading-border-add");
-      }, 500);
     }
   }
 
@@ -46,10 +43,7 @@ export class FitFreedomComponent implements OnInit {
   }
 
   scrollToPage(selectedPage: string) {
-    const data =
-      !this.isMobile && selectedPage === "reasonstojoin"
-        ? "whyfitbox"
-        : selectedPage;
+    const data = selectedPage;
     this.scrollPage.emit(data); // this emits the toggle status to parent component so that it can open or close the navigation accordingly.
   }
 }

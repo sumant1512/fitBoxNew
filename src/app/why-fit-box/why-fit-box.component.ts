@@ -48,10 +48,7 @@ export class WhyFitBoxComponent implements OnInit {
   }
 
   scrollToPage(selectedPage: string) {
-    const data =
-      !this.isMobile && selectedPage === "reasonstojoin"
-        ? "reasonone"
-        : selectedPage;
+    const data = selectedPage;
     this.scrollPage.emit(data); // this emits the toggle status to parent component so that it can open or close the navigation accordingly.
   }
 }
