@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row py-3 px-0 mb-3 px-md-4 heading-border faq">
         <div class="col-12 text-center text-md-right col-md-5">
-          <h1 class="d-inline-block orbitron font-weight-bold text-black">
+          <h2 class="d-inline-block mt-2 orbitron font-weight-bold text-black">
             <span
               [ngClass]="isAnimationActive ? 'left-to-right' : ''"
               class="orbitron"
@@ -26,7 +26,7 @@
               [ngClass]="isLineActive ? 'bottom-to-top' : ''"
               class="bottom-line"
             ></div>
-          </h1>
+          </h2>
         </div>
         <div
           *ngIf="isAnimationActive"
@@ -49,7 +49,7 @@
           class="card bg-transparent"
         >
           <a
-            class="inside card-link collapsed text-white"
+            class="inside card-link collapsed"
             data-toggle="collapse"
             href="#collapse{{ index }}"
           >
@@ -68,11 +68,10 @@
             data-parent="#accordion"
           >
             <div class="card-body text-right">
-              <video controls>
-                <source src="mov_bbb.mp4" type="video/mp4" />
-                <source src="mov_bbb.ogg" type="video/ogg" />
-                Your browser does not support HTML video.
-              </video>
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
             </div>
           </div>
         </div>
