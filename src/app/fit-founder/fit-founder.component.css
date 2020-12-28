@@ -1,6 +1,6 @@
 .background {
   /* The image used */
-  background-image: url("../../assets/carousel/BannerImage1.png");
+  background-image: url("../../assets/carousel/firFounderDesktop.png");
 
   /* Set a specific height */
   min-height: 500px;
@@ -18,4 +18,25 @@
 
 .story-align {
   margin-top: 45vh;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media only screen and (min-width: 30px) and (max-width: 767px) {
+  .background {
+    /* The image used */
+    background-image: url("../../assets/fitFounderMobile.png");
+
+    /* Set a specific height */
+    min-height: 500px;
+    height: 100vh;
+    /* opacity: 0.5; */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
