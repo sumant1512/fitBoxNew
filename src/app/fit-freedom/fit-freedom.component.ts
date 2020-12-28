@@ -12,11 +12,15 @@ import { FITFREEDOMDATA } from "../constants";
   selector: "app-fit-freedom",
   templateUrl: "./fit-freedom.component.html",
   styleUrls: ["./fit-freedom.component.css"],
+  host: {
+    "(window:resize)": "onWindowResize($event)",
+  },
 })
 export class FitFreedomComponent implements OnInit {
   @Output() scrollPage = new EventEmitter<string>();
   isAnimationActive = false;
   isLineActive = false;
+  isMobile: boolean;
   fitCardData = FITFREEDOMDATA;
   constructor() {}
 
@@ -31,10 +35,21 @@ export class FitFreedomComponent implements OnInit {
       setTimeout(() => {
         this.isLineActive = true;
       }, 300);
+      setTimeout(() => {
+        fitfreedom.classList.add("heading-border-add");
+      }, 500);
     }
   }
 
+  onWindowResize(event) {
+    this.isMobile = event.target.innerWidth < 767;
+  }
+
   scrollToPage(selectedPage: string) {
-    this.scrollPage.emit(selectedPage); // this emits the toggle status to parent component so that it can open or close the navigation accordingly.
+    const data =
+      !this.isMobile && selectedPage === "reasonstojoin"
+        ? "whyfitbox"
+        : selectedPage;
+    this.scrollPage.emit(data); // this emits the toggle status to parent component so that it can open or close the navigation accordingly.
   }
 }

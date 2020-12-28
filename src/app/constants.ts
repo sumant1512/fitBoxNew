@@ -90,6 +90,90 @@ export const FITTOUCHDATA = {
   ],
 };
 
+export const FITPAYDATA = {
+  number: 1,
+  strokeHead: "Fit",
+  mainHead: "Pay",
+  image: "./../assets/fitPay.png",
+  fitList: [
+    {
+      data: "Why pay for the year when you can pay per workout.",
+    },
+    {
+      data: "Switch to Fit-Pay anytime",
+    },
+    {
+      data: "Flexible Recharge",
+    },
+    {
+      data: "Balance Carry forward",
+    },
+  ],
+};
+
+export const FITTRAINDATA = {
+  number: 2,
+  strokeHead: "Fit",
+  mainHead: "Train",
+  image: "./../assets/fitTrain.png",
+  fitList: [
+    {
+      data: "Affordable Personal Training",
+    },
+    {
+      data: "Customized Workout plans for faster results",
+    },
+    {
+      data: "Bring your Freelance Trainer with you",
+    },
+    {
+      data: "Premium Mental & Physical Coaching by Fit-Boxer",
+    },
+  ],
+};
+
+export const FITDIGITALDATA = {
+  number: 3,
+  strokeHead: "Fit",
+  mainHead: "Digital",
+  image: "./../assets/fitDigital.png",
+  fitList: [
+    {
+      data: "Track & Record your B.M.I to map your progress",
+    },
+    {
+      data: "Touchless Access Control for Smooth Entry & Exit",
+    },
+    {
+      data: "Facial Recognition & A.I based Digital Workout Library",
+    },
+    {
+      data: "App Based Fitness Journey Management on your finger tips",
+    },
+  ],
+};
+
+export const FITGROUPXDATA = {
+  number: 4,
+  strokeHead: "Fit",
+  mainHead: "Group X",
+  image: "./../assets/fitGroupX.png",
+  fitList: [
+    {
+      data: "Wallet that BeneFITS both.",
+    },
+    {
+      data: "Just not share your fitness goals, Share your wallet too.",
+    },
+    {
+      data: "Add members to your wallet with Just Rs 500/-",
+    },
+    {
+      data: "Recharge your Fit Pay, and share it with your companion.",
+    },
+  ],
+};
+
 export const FAQLIST = [
   {
     question: "Tour Video",

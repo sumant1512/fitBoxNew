@@ -6,10 +6,10 @@ import {
   Output,
 } from "@angular/core";
 import {
-  FITFLOWDATA,
-  FITFREEDOMDATA,
-  FITSMILEDATA,
-  FITTOUCHDATA,
+  FITDIGITALDATA,
+  FITGROUPXDATA,
+  FITPAYDATA,
+  FITTRAINDATA,
 } from "../constants";
 import { isInViewport } from "../view-port-check";
 
@@ -43,10 +43,10 @@ export class FitFeaturesCarouselComponent implements OnInit {
 
   isAnimationActiveLogo = false;
   isLineActiveLogo = false;
-  fitFreedomCardData = FITFREEDOMDATA;
-  fitFlowCardData = FITFLOWDATA;
-  fitSmileCardData = FITSMILEDATA;
-  fitTouchCardData = FITTOUCHDATA;
+  fitFreedomCardData = FITPAYDATA;
+  fitFlowCardData = FITTRAINDATA;
+  fitSmileCardData = FITDIGITALDATA;
+  fitTouchCardData = FITGROUPXDATA;
   constructor() {}
 
   ngOnInit(): void {}

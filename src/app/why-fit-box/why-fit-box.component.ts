@@ -11,14 +11,22 @@ import { isInViewport } from "../view-port-check";
   selector: "app-why-fit-box",
   templateUrl: "./why-fit-box.component.html",
   styleUrls: ["./why-fit-box.component.css"],
+  host: {
+    "(window:resize)": "onWindowResize($event)",
+  },
 })
 export class WhyFitBoxComponent implements OnInit {
   @Output() scrollPage = new EventEmitter<string>();
   isAnimationActive = false;
   isLineActive = false;
+  isMobile: boolean;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (window.innerWidth < 768) {
+      this.isMobile = true;
+    }
+  }
 
   @HostListener("window:scroll", ["$event"])
   checkScroll() {
@@ -35,7 +43,15 @@ export class WhyFitBoxComponent implements OnInit {
     }
   }
 
+  onWindowResize(event) {
+    this.isMobile = event.target.innerWidth < 767;
+  }
+
   scrollToPage(selectedPage: string) {
-    this.scrollPage.emit(selectedPage); // this emits the toggle status to parent component so that it can open or close the navigation accordingly.
+    const data =
+      !this.isMobile && selectedPage === "reasonstojoin"
+        ? "reasonone"
+        : selectedPage;
+    this.scrollPage.emit(data); // this emits the toggle status to parent component so that it can open or close the navigation accordingly.
   }
 }
