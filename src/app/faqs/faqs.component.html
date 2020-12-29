@@ -43,28 +43,405 @@
       </div>
     </div>
     <div>
-      <div class="accordion pb-4 orbitron" id="accordionExample">
-        <div
-          *ngFor="let faq of faqList; let index = index"
-          class="card bg-transparent"
-        >
-          <a
-            class="inside card-link collapsed"
-            data-toggle="collapse"
-            href="#collapse{{ index }}"
-          >
-            <div class="row card-header border-0 pb-0 border-left">
+      <div id="accordion">
+        <div class="card bg-transparent">
+          <div id="headingOne">
+            <h5 class="mb-0">
               <div class="col-12">
-                <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
-                <span class="question font-weight-bold text-yellow">
-                  {{ faq.question }}
-                </span>
+                <button
+                  class="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Tour Video
+                  </span>
+                </button>
               </div>
-            </div>
-          </a>
+            </h5>
+          </div>
+
           <div
-            id="collapse{{ index }}"
+            id="collapseOne"
             class="collapse"
+            aria-labelledby="headingOne"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingTwo">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Pay-Per-Workout
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseTwo"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingThree">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-Switch
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseThree"
+            class="collapse"
+            aria-labelledby="headingThree"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingFour">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-Transfer
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseFour"
+            class="collapse"
+            aria-labelledby="headingFour"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingFive">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-Friends
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseFive"
+            class="collapse"
+            aria-labelledby="headingFive"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingSix">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-Family
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseSix"
+            class="collapse"
+            aria-labelledby="headingSix"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingSeven">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-Foucs
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseSeven"
+            class="collapse"
+            aria-labelledby="headingSeven"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingEight">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseEight"
+                  aria-expanded="false"
+                  aria-controls="collapseEight"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-Happy
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseEight"
+            class="collapse"
+            aria-labelledby="headingEight"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingNine">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseNine"
+                  aria-expanded="false"
+                  aria-controls="collapseNine"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-Train
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseNine"
+            class="collapse"
+            aria-labelledby="headingNine"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingTen">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseTen"
+                  aria-expanded="false"
+                  aria-controls="collapseTen"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-GroupX
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseTen"
+            class="collapse"
+            aria-labelledby="headingTen"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingEleven">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseEleven"
+                  aria-expanded="false"
+                  aria-controls="collapseEleven"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-Welcome
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseEleven"
+            class="collapse"
+            aria-labelledby="headingEleven"
+            data-parent="#accordion"
+          >
+            <div class="card-body text-right">
+              <object
+                class="box-shadow"
+                data="https://www.youtube.com/v/gGFA20y7Ar4&feature=youtu.be"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div id="headingTwelve">
+            <h5 class="mb-0">
+              <div class="col-12">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseTwelve"
+                  aria-expanded="false"
+                  aria-controls="collapseTwelve"
+                >
+                  <img class="mr-3" src="../assets/dumbell.svg" alt="Dumbell" />
+                  <span class="question orbitron font-weight-bold text-yellow">
+                    Fit-Test
+                  </span>
+                </button>
+              </div>
+            </h5>
+          </div>
+          <div
+            id="collapseTwelve"
+            class="collapse"
+            aria-labelledby="headingTwelve"
             data-parent="#accordion"
           >
             <div class="card-body text-right">
