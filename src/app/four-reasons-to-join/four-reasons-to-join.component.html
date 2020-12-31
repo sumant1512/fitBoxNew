@@ -30,11 +30,11 @@
             [ngClass]="isAnimationActive ? 'bottom-to-top text-light' : ''"
             class="d-inline-block mt-2 orbitron font-weight-bold text-black"
           >
-            <span>4 Resons To Join </span>
+            <!-- <span>Fit-Benefits : </span> -->
             <span
               [ngClass]="isLineActive ? 'right-to-left text-yellow' : ''"
               class="text-black"
-              >FITBOX</span
+              >Fit-Benefits</span
             >
             <div
               *ngIf="isLineActive"
@@ -45,6 +45,14 @@
         </div>
       </div>
       <div class="row my-3 text-md-center">
+        <div class="col-12">
+          <h3
+            [ngClass]="isAnimationActive ? 'left-to-right' : ''"
+            class="text-light orbitron my-4"
+          >
+            A liberty to your Time, Relations and Money
+          </h3>
+        </div>
         <div class="col-12">
           <h4
             [ngClass]="isAnimationActive ? 'left-to-right' : ''"

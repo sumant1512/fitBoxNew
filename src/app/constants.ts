@@ -13,16 +13,16 @@ export const FITFREEDOMDATA = {
   image: "./../assets/fitFreedom.png",
   fitList: [
     {
-      data: "Take control of your Fitness Budget",
+      data: "Take charge of your Fitness Budget.",
     },
     {
-      data: "Visit any Fitbox",
+      data: "Visit any Fitbox at your Convenience.",
     },
     {
-      data: "Use Fit-Cash to buy any services any time.",
+      data: "Use Fit-Cash to avail any Services Anytime.",
     },
     {
-      data: "Share Fit-Cash with your Friends & Family",
+      data: "Share Fit-Cash with your Friends & Family.",
     },
   ],
 };
@@ -34,16 +34,16 @@ export const FITFLOWDATA = {
   image: "./../assets/fitFlow.png",
   fitList: [
     {
-      data: "Custom Workout Journey Flow",
+      data: "Custom Workout Routines.",
     },
     {
-      data: "Live Member Tracking",
+      data: "Auto Reminders for Habit Formation.",
     },
     {
-      data: "Auto Reminders for Habit Formation",
+      data: "Live Member Tracking - real time floor count.",
     },
     {
-      data: "Challenge your limits",
+      data: "Challenge your limits, flow out of your comfort zone.",
     },
   ],
 };
@@ -55,16 +55,16 @@ export const FITSMILEDATA = {
   image: "./../assets/fitSmile.png",
   fitList: [
     {
-      data: "Warm & Welcoming Staff",
+      data: "Warm & Welcoming Staff.",
     },
     {
-      data: "Motivation & Empowering Culture",
+      data: "Energetic & Empowering Culture.",
     },
     {
-      data: "Polished & Groomed Staff",
+      data: "Polished & Professionally Groomed Team.",
     },
     {
-      data: "World Class Industry Hygiene standards",
+      data: "Maintaining Hygiene of World Class Standards.",
     },
   ],
 };
@@ -76,16 +76,16 @@ export const FITTOUCHDATA = {
   image: "./../assets/fitTouch.png",
   fitList: [
     {
-      data: "Your Goal is our Goal",
+      data: "Your Goal is our Goal.",
     },
     {
-      data: "Address your problems with our compassionate staff",
+      data: "Address your Problems with our Compassionate Staff. ",
     },
     {
-      data: "Community driven accountability culture",
+      data: "Community driven Reliable Culture.",
     },
     {
-      data: "Building trust for ever lasting fitness journey",
+      data: "Building Trust for your Everlasting Fitness Journey.",
     },
   ],
 };
@@ -97,16 +97,16 @@ export const FITPAYDATA = {
   image: "./../assets/fitPay.png",
   fitList: [
     {
-      data: "Why pay for the year when you can pay per workout.",
+      data: "Just Pay for your Presence, not for your Absence.",
     },
     {
-      data: "Switch to Fit-Pay anytime",
+      data: "Switch to Fit-Pay Wallet Anytime.",
     },
     {
-      data: "Flexible Recharge",
+      data: "Flexible Recharge Options.",
     },
     {
-      data: "Balance Carry forward",
+      data: "Carry Forward your remaining Balance.",
     },
   ],
 };
@@ -118,16 +118,16 @@ export const FITTRAINDATA = {
   image: "./../assets/fitTrain.png",
   fitList: [
     {
-      data: "Affordable Personal Training",
+      data: "Affordable Personal Training.",
     },
     {
-      data: "Customized Workout plans for faster results",
+      data: "Customized Workout Plans for Optimum Results.",
     },
     {
-      data: "Bring your Freelance Trainer with you",
+      data: "Premium Mental & Physical Coaching by Fit-Boxer.",
     },
     {
-      data: "Premium Mental & Physical Coaching by Fit-Boxer",
+      data: "Bring your own Freelance Trainer with you.",
     },
   ],
 };
@@ -139,16 +139,16 @@ export const FITDIGITALDATA = {
   image: "./../assets/fitDigital.png",
   fitList: [
     {
-      data: "Track & Record your B.M.I to map your progress",
+      data: "Track & Record your B.M.I to Map your Progress.",
     },
     {
-      data: "Touchless Access Control for Smooth Entry & Exit",
+      data: "Contactless Access Control for Smooth Entry & Exit.",
     },
     {
-      data: "Facial Recognition & A.I based Digital Workout Library",
+      data: "Facial Recognition & A.I. based Digital Workout Library.",
     },
     {
-      data: "App Based Fitness Journey Management on your finger tips",
+      data: "App Based Fitness Journey Management on your finger tips.",
     },
   ],
 };
@@ -160,16 +160,16 @@ export const FITGROUPXDATA = {
   image: "./../assets/fitGroupX.png",
   fitList: [
     {
-      data: "Wallet that BeneFITS both.",
+      data: "A Variety of Batches at Multiple Time Slots.",
     },
     {
-      data: "Just not share your fitness goals, Share your wallet too.",
+      data: "Easy Booking & Cancellation anytime.",
     },
     {
-      data: "Add members to your wallet with Just Rs 500/-",
+      data: "Live Heart Rate Monitoring.",
     },
     {
-      data: "Recharge your Fit Pay, and share it with your companion.",
+      data: "Leaderboard & Gamification on Fitbox App.",
     },
   ],
 };
