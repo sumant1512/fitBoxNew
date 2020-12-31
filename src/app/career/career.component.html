@@ -2,20 +2,26 @@
   <div class="container">
     <div class="row careers mt-5 mb-0 mb-md-4">
       <div class="col-12 col-md-6">
-        <h4
-          *ngIf="isAnimationActive"
-          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-          class="d-inline-block font-weight-bold text-light"
+        <a
+          class="pointer"
+          href="https://www.linkedin.com/in/digenvarma"
+          target="_blank"
         >
-          <span>Connect with</span>
-          <span class="text-yellow"> Fitbox Linkedin</span>
-          <i class="text-yellow fa fa-linkedin-square ml-2"></i>
-          <div
-            *ngIf="isLineActive"
-            [ngClass]="isLineActive ? 'left-to-right' : ''"
-            class="bottom-line"
-          ></div>
-        </h4>
+          <h4
+            *ngIf="isAnimationActive"
+            [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+            class="d-inline-block font-weight-bold text-light"
+          >
+            <span>Connect with</span>
+            <span class="text-yellow"> Fitbox Linkedin</span>
+            <i class="text-yellow fa fa-linkedin-square ml-2"></i>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'left-to-right' : ''"
+              class="bottom-line"
+            ></div>
+          </h4>
+        </a>
       </div>
       <div class="col-12 col-md-6 mt-4 mt-md-0">
         <h4

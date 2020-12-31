@@ -1,12 +1,12 @@
 <app-header (toggleStatus)="toggleforHeader($event)"></app-header>
-<div class="background">
+<div class="background bg-black">
   <div class="container">
     <div class="row" id="mission">
       <div class="col-12 mission">
         <h1
           class="bottom-to-top mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold light-yellow"
         >
-          <span>Mission</span>
+          <span class="text-yellow">Mission</span>
           <div
             *ngIf="isLineActive"
             [ngClass]="isLineActive ? 'left-to-right' : ''"
@@ -21,6 +21,10 @@
             >of the Indian Fitness Center Industry by 2026.</span
           >
         </h5>
+        <h5 class="text-light">
+          Fitbox aims to create a fit ecosystem for fitness industry in order to
+          empower the nation.
+        </h5>
       </div>
     </div>
     <div class="row" id="vision">
@@ -28,7 +32,7 @@
         <h1
           class="bottom-to-top mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold light-yellow"
         >
-          <span>Vision</span>
+          <span class="text-yellow">Vision</span>
           <div
             *ngIf="isLineActive"
             [ngClass]="isLineActive ? 'left-to-right' : ''"
@@ -50,7 +54,7 @@
         <h1
           class="bottom-to-top mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold light-yellow"
         >
-          <span>Goals</span>
+          <span class="text-yellow">Goals</span>
           <div
             *ngIf="isLineActive"
             [ngClass]="isLineActive ? 'left-to-right' : ''"
@@ -60,10 +64,13 @@
       </div>
       <div class="col-12">
         <h5 class="bottom-to-top">
-          <span class="text-light"
-            >Make sure Fitness Experts are paid
-            <span class="text-yellow"> “More” </span>than MBA & Engineers
+          <span class="text-light">
+            To enable Fitness Experts to get paid and valued
+            <span class="text-yellow"> “More” </span>than MBA & Engineers.
           </span>
+        </h5>
+        <h5 class="bottom-to-top my-3">
+          <span class="text-light"> To be Unicorn of Fitness Industry </span>
         </h5>
         <h5 class="bottom-to-top my-3">
           <span class="text-light"
