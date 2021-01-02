@@ -101,7 +101,7 @@ export class HeaderComponent implements OnInit {
   }
 
   navigateToHome() {
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/");
   }
 
   // this function is for scrollPage of pages

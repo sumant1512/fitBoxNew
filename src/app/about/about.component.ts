@@ -1,5 +1,6 @@
 import { ViewportScroller } from "@angular/common";
 import { Component, ElementRef, HostListener, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { ToggleStatusEmit } from "../data.type";
 import { isInViewport } from "../view-port-check";
 
@@ -13,11 +14,11 @@ export class AboutComponent implements OnInit {
   isLineActive = false;
   constructor(
     public el: ElementRef,
-    private viewPortScroller: ViewportScroller
+    private viewPortScroller: ViewportScroller,
+    private router: Router
   ) {}
 
   ngOnInit() {
-    console.log(window.pageYOffset);
     setTimeout(() => {
       this.isLineActive = true;
     }, 300);

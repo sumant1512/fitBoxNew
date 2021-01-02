@@ -15,6 +15,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: "enabled",
       anchorScrolling: "enabled",
+      onSameUrlNavigation: "reload",
     }),
   ],
   exports: [RouterModule],
